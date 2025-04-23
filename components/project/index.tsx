@@ -66,7 +66,7 @@ export default function ProjectPage() {
         </svg>
       </div>
 
-      <div className="grid gap-12 items-center justify-center md:grid-cols-2">
+      <div className="grid gap-12 items-center justify-center md:grid-cols-3">
         {PROJECT_INFO.map((project) => (
           <motion.div
             whileHover={{
@@ -80,7 +80,7 @@ export default function ProjectPage() {
             {/* Animated Border */}
             <div className="absolute inset-0 rounded-lg animate-gradient-border-before pointer-events-none"></div>
 
-            <Card className="overflow-hidden rounded-lg w-full relative">
+            <Card className="overflow-hidden rounded-lg w-full relative h-[400px]">
               <CardHeader>
                 <Image
                   src={project.image}
@@ -93,18 +93,18 @@ export default function ProjectPage() {
 
               <CardContent className="p-4 text-left">
                 <h2 className="text-lg font-semibold mb-2">{project.name}</h2>
-                <p className="text-sm mb-3">{project.description}</p>
+                <p className="text-sm">{project.description}</p>
 
                 {/* Bullet Points */}
-                <ul className="list-disc list-inside space-y-1">
+                {/* <ul className="list-disc list-inside space-y-1">
                   {project.bullets.map((bullet, index) => (
                     <li key={index}>{bullet}</li>
                   ))}
-                </ul>
+                </ul> */}
               </CardContent>
 
               {/* Footer with Link */}
-              <CardFooter className="pt-4 text-right">
+              <CardFooter className="pt-2 text-right">
                 <a
                   href={project.link}
                   target="_blank"
