@@ -21,9 +21,10 @@ export default function LandingPage() {
         <Image
           src="/assets/new.svg"
           alt="Background Image"
-          layout="fill"
-          objectFit="cover"
-          className="z-[-1]" // Ensures it stays behind other content
+          fill
+          priority
+          quality={100}
+          className="z-[-1] object-cover"
         />
       )}
       <div className="relative flex justify-center mx-24 sm:mx-32 md:mx-auto">
@@ -77,15 +78,25 @@ export default function LandingPage() {
         <h2 className="text-2xl text-center md:text-start mt-2">
           Creating a brighter tomorrow with technology and innovation.
         </h2>
-
-        <div className="flex justify-center md:justify-start  gap-4 mt-4">
-          <a href="#about-me">
-            <Button className="text-lg" variant="secondary" size="lg">
-              <CgPentagonDown size={50} /> Know more
+        <div className="flex justify-center md:justify-start gap-4 mt-4">
+          <a href="#about-me" className="transition-transform hover:scale-105">
+            <Button
+              className="text-lg hover:opacity-90"
+              variant="secondary"
+              size="lg"
+            >
+              <CgPentagonDown size={50} className="animate-bounce" /> Know more
             </Button>
           </a>
-          <a href="mailto:hareeshbhittam@email.com">
-            <Button className="text-lg" variant="default" size="lg">
+          <a
+            href="mailto:hareeshbhittam@email.com"
+            className="transition-transform hover:scale-105"
+          >
+            <Button
+              className="text-lg hover:opacity-90"
+              variant="default"
+              size="lg"
+            >
               Get in touch
             </Button>
           </a>
