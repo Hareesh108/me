@@ -48,7 +48,7 @@ export default function Footer() {
               Me
             </span>
           </a>{" "}
-          | © 2024 All rights reserved.
+          | © 2025 All rights reserved.
         </div>
       </footer>
     </div>
