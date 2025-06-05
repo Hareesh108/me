@@ -1,11 +1,12 @@
 "use client";
 
-import React, { memo } from "react";
+import React, { memo, useRef, useState } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { CgPentagonDown } from "react-icons/cg";
 import { useTheme } from "next-themes";
 import { Cover } from "../ui/cover";
+import { Compare } from "../ui/compare";
+import AboutMePage from "../about-me";
 
 export default function LandingPage() {
   const { resolvedTheme } = useTheme();
@@ -15,8 +16,23 @@ export default function LandingPage() {
 
   const isDarkMode = resolvedTheme === "dark" && mounted;
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const audioRef = useRef<any>(null);
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center justify-center min-h-screen max-w-screen-xl mt-16 md:mt-0 mx-4 xl:mx-auto">
+    <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center justify-center min-h-screen max-w-screen-xl mt-16 md:mt-10 mx-4 xl:mx-auto">
       {isDarkMode && (
         <Image
           src="/assets/new.svg"
@@ -27,33 +43,69 @@ export default function LandingPage() {
           className="z-[-1] object-cover"
         />
       )}
-      <div className="relative flex justify-center mx-24 sm:mx-32 md:mx-auto">
-        <div className="relative">
-          <Image
-            src="/assets/hero-back.svg"
-            alt="Overlay Image"
-            loading="eager"
-            width={500}
-            height={500}
-          />
 
-          <Image
-            src="/profile/harsh01.jpg"
-            alt="Profile Picture"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="rounded-full border-primary shadow-transparent absolute top-0 left-0"
-          />
+      <div className="flex-1 flex justify-center items-center lg:justify-end w-full mt-8 ">
+        <div className="text-2xl text-center md:text-start mt-2">
+          <Resume />
         </div>
       </div>
 
       <div className="flex flex-col gap-2  md:items-start mx-4 md:mx-auto">
-        <Title />
-
-        {/* <div className="px-3 py-2 hidden sm:block absolute bottom-36 right-2 sm:right-20 bg-yellow-500/20 rounded-[6px] w-max font-medium dark:text-yellow-300 text-yellow-500 border border-yellow-500/20 animate-wiggle duration-1000">
-          Innovation
-        </div> */}
+        <audio ref={audioRef} src="/music/SHAED-ZAYN-Trampoline.mp3" loop>
+          <track kind="captions" src="" label="Music captions" />
+        </audio>
+        <button
+          className=""
+          onClick={togglePlay}
+          onKeyDown={(e) => e.key === "Enter" && togglePlay()}
+          aria-label={isPlaying ? "Pause music" : "Play music"}
+          title={
+            isPlaying
+              ? "Shhh... Let’s pause the beats! 🛑"
+              : "Hit play for some good vibes! 🎵"
+          }
+        >
+          {isPlaying ? (
+            <div className="flex justify-center items-center translate-x-[1px] animate-pulse mb-4 md:mb-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-red-500"
+              >
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </div>
+          ) : (
+            <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-green-600"
+              >
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span className="sr-only">Play</span>
+            </div>
+          )}
+        </button>
+        <div className="text-2xl text-center md:text-start ">
+          <Title />
+        </div>
 
         <h2 className="text-2xl text-center md:text-start mt-2">
           Creating a brighter tomorrow with technology and innovation.
@@ -65,7 +117,7 @@ export default function LandingPage() {
               variant="secondary"
               size="lg"
             >
-              <CgPentagonDown size={50} className="animate-bounce" /> Know more
+              Know more
             </Button>
           </a>
           <a
@@ -82,6 +134,9 @@ export default function LandingPage() {
           </a>
         </div>
       </div>
+      <div className="w-full col-span-2">
+        <AboutMePage />
+      </div>
     </div>
   );
 }
@@ -95,3 +150,18 @@ export const Title = memo(() => {
 });
 
 Title.displayName = "Title";
+
+export function Resume() {
+  return (
+    <div className="w-full rounded-3xl dark:bg-neutral-900 bg-neutral-100 border-neutral-200 dark:border-neutral-800">
+      <Compare
+        firstImage="/profile/resume.png"
+        secondImage="/profile/harsh01.jpg"
+        firstImageClassName="object-fit object-left-top"
+        secondImageClassname="object-fit object-left-top"
+        className="h-[200px] sm:h-[250px] md:h-[400px] lg:h-[500px] w-[300px] lg:w-[450px] xl:w-[500px] "
+        slideMode="hover"
+      />
+    </div>
+  );
+}
