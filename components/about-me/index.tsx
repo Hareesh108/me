@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { FaLinkedin, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { Skills } from "./skills";
+import { BACKEND_SKILLS, DEVOPS_SKILLS, FRONTEND_SKILLS } from "@/lib/utils";
 export default function AboutMePage() {
   return (
     <div
@@ -19,7 +21,7 @@ export default function AboutMePage() {
           </a>
         </p>
 
-        <div className="flex space-x-4 justify-center mt-2 md:mt-0">
+        <div className="flex space-x-4 justify-center my-2 md:my-0">
           <Link
             href="https://www.linkedin.com/in/hareeshbhittam/"
             target="_blank"
@@ -48,9 +50,16 @@ export default function AboutMePage() {
             />
           </Link>
         </div>
+
+        <div className="space-y-4 mx-2 lg:mx-auto">
+          <h3 className="text-lg font-semibold">Expertise</h3>
+          <Skills skills={FRONTEND_SKILLS} />
+          <Skills skills={DEVOPS_SKILLS} />
+          <Skills skills={BACKEND_SKILLS} />
+        </div>
       </div>
 
-      <div className="flex flex-col gap-2 items-start mx-4 lg:mx-auto">
+      <div className="flex flex-col gap-2 items-start mx-2 lg:mx-auto">
         <h1 className="text-lg md:text-3xl font-bold">Hire me as developer.</h1>
 
         <p className="opacity-70">
