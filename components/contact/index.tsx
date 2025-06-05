@@ -59,8 +59,12 @@ export default function ContactPage() {
         </div>
 
         <h5 className="-mt-4">
-          Interested in working together or have a question? Feel free to reach
-          out!
+          {/* Interested in working together or have a question? Feel free to reach
+          out! */}
+          Specialize in frontend and backend tools and frameworks, with a strong
+          focus on improving DX and infrastructure. And I love helping and
+          connecting with people around the world. If you’re interested in
+          working together, feel free to reach out!
         </h5>
         <a href="mailto:hareeshbhittam@email.com">
           <Button className="w-32 font-bold mt-5" variant="default" size="lg">
