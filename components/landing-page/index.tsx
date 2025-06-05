@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { CgPentagonDown } from "react-icons/cg";
 import { useTheme } from "next-themes";
+import { Cover } from "../ui/cover";
 
 export default function LandingPage() {
   const { resolvedTheme } = useTheme();
@@ -13,7 +14,6 @@ export default function LandingPage() {
   React.useEffect(() => setMounted(true), []);
 
   const isDarkMode = resolvedTheme === "dark" && mounted;
-  const isLightMode = resolvedTheme === "light" && mounted;
 
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center justify-center min-h-screen max-w-screen-xl mt-16 md:mt-0 mx-4 xl:mx-auto">
@@ -49,31 +49,11 @@ export default function LandingPage() {
       </div>
 
       <div className="flex flex-col gap-2  md:items-start mx-4 md:mx-auto">
-        <h1 className="text-4xl sm:text-6xl z-[50] font-bold text-center md:text-start">
-          <span className="relative -z-10">
-            Hi! I&apos;m Hareesh.
-            {isDarkMode && (
-              <img
-                alt="Header underline"
-                loading="lazy"
-                width="300"
-                height="24"
-                src="assets/header-underline.svg"
-                className="absolute -bottom-1 lg:bottom-0 lg:w-4/5 left-0 lg:left-14 -z-20"
-              />
-            )}
-            {isLightMode && (
-              <img
-                alt="Header underline"
-                loading="lazy"
-                width="300"
-                height="24"
-                src="assets/header-underline-light.svg"
-                className="absolute -bottom-1 lg:bottom-0 lg:w-4/5 left-0 lg:left-14 -z-20"
-              />
-            )}
-          </span>
-        </h1>
+        <Title />
+
+        {/* <div className="px-3 py-2 hidden sm:block absolute bottom-36 right-2 sm:right-20 bg-yellow-500/20 rounded-[6px] w-max font-medium dark:text-yellow-300 text-yellow-500 border border-yellow-500/20 animate-wiggle duration-1000">
+          Innovation
+        </div> */}
 
         <h2 className="text-2xl text-center md:text-start mt-2">
           Creating a brighter tomorrow with technology and innovation.
@@ -105,3 +85,13 @@ export default function LandingPage() {
     </div>
   );
 }
+
+export const Title = memo(() => {
+  return (
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight sm:my-6 dark:text-zinc-300 text-zinc-700">
+      Hi, I&apos;m <Cover className="cursor-crosshair">Hareesh</Cover>
+    </h1>
+  );
+});
+
+Title.displayName = "Title";
