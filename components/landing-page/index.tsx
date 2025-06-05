@@ -10,9 +10,12 @@ import AboutMePage from "../about-me";
 import { ThemeToggle } from "../theme";
 import Link from "next/link";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { useWindowEvent } from "@/contexts/window-event-provider";
 
 export default function LandingPage() {
   const { resolvedTheme } = useTheme();
+  const { scrollY } = useWindowEvent();
+
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => setMounted(true), []);
