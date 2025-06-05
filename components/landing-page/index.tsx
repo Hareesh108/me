@@ -31,8 +31,29 @@ export default function LandingPage() {
     }
   };
 
+  const isNotTop = scrollY > 250;
+
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center justify-center min-h-screen max-w-screen-lg mt-16 md:mt-10 mx-4 xl:mx-auto">
+      {isDarkMode && !isNotTop && (
+        <Image
+          src="/assets/home-left.svg"
+          width={350}
+          height={350}
+          alt="left img"
+          className="left-0 top-0 fixed h-[230px] md:h-[350px] w-[230px] md:w-[350px]"
+        />
+      )}
+
+      {isDarkMode && !isNotTop && (
+        <Image
+          src="/assets/home-right.svg"
+          width={350}
+          height={350}
+          alt="left img"
+          className="right-0 top-0 fixed h-[230px] md:h-[350px] w-[230px] md:w-[350px]"
+        />
+      )}
       {isDarkMode && (
         <Image
           src="/assets/new.svg"
@@ -95,7 +116,7 @@ export default function LandingPage() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-green-600"
+                  className="text-primary"
                 >
                   <polygon points="5 3 19 12 5 21 5 3"></polygon>
                 </svg>
