@@ -8,6 +8,8 @@ import { Cover } from "../ui/cover";
 import { Compare } from "../ui/compare";
 import AboutMePage from "../about-me";
 import { ThemeToggle } from "../theme";
+import Link from "next/link";
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 export default function LandingPage() {
   const { resolvedTheme } = useTheme();
@@ -72,7 +74,7 @@ export default function LandingPage() {
       </div>
 
       <div className="flex flex-col gap-2  md:items-start mx-4 md:mx-auto">
-        <div className="flex gap-7 justify-center mt-4">
+        <div className="flex gap-7 justify-center mt-5">
           <audio ref={audioRef} src="/music/SHAED-ZAYN-Trampoline.mp3" loop>
             <track kind="captions" src="" label="Music captions" />
           </audio>
@@ -105,7 +107,7 @@ export default function LandingPage() {
                 </svg>
               </div>
             ) : (
-              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-0">
+              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -124,16 +126,77 @@ export default function LandingPage() {
               </div>
             )}
           </button>
-          <div>
+
+          <div className="animate-bounce">
             <ThemeToggle />
           </div>
+
+          <Link
+            href="https://www.linkedin.com/in/hareeshbhittam/"
+            target="_blank"
+            className="animate-bounce"
+          >
+            <FaLinkedin
+              size={24}
+              className="text-primary hover:text-destructive"
+            />
+          </Link>
+          <Link
+            href="https://x.com/hareesh_bhittam"
+            target="_blank"
+            className="animate-bounce"
+          >
+            <FaTwitter
+              size={24}
+              className="text-primary hover:text-destructive"
+            />
+          </Link>
+          <Link
+            href="https://github.com/Hareesh108"
+            target="_blank"
+            className="animate-bounce"
+          >
+            <FaGithub
+              size={24}
+              className="text-primary hover:text-destructive"
+            />
+          </Link>
+          {/* <div className="flex space-x-4  justify-center">
+            <Link
+              href="https://www.linkedin.com/in/hareeshbhittam/"
+              target="_blank"
+            >
+              <FaLinkedin
+                size={24}
+                className="text-primary hover:text-destructive"
+              />
+            </Link>
+            <Link href="https://x.com/hareesh_bhittam" target="_blank">
+              <FaTwitter
+                size={24}
+                className="text-primary hover:text-destructive"
+              />
+            </Link>
+            <Link href="https://github.com/Hareesh108" target="_blank">
+              <FaGithub
+                size={24}
+                className="text-primary hover:text-destructive"
+              />
+            </Link>
+            <Link href="https://www.instagram.com/_harsh_20.6/" target="_blank">
+            <FaInstagram
+              size={24}
+              className="text-primary hover:text-destructive"
+            />
+          </Link>
+          </div> */}
         </div>
 
         <div className="text-2xl text-center md:text-start ">
           <Title />
         </div>
 
-        <h2 className="text-2xl text-center md:text-start mt-2">
+        <h2 className="text-2xl text-center md:text-start">
           Creating a brighter tomorrow with <br /> technology and innovation.
         </h2>
         <div className="flex justify-center md:justify-start gap-4 mt-4">

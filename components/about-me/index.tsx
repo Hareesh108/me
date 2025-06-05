@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { FaLinkedin, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+
 import { Skills } from "./skills";
 import { BACKEND_SKILLS, DEVOPS_SKILLS, FRONTEND_SKILLS } from "@/lib/utils";
 export default function AboutMePage() {
@@ -21,38 +20,8 @@ export default function AboutMePage() {
           </a>
         </p>
 
-        <div className="flex space-x-4 justify-center my-2 md:my-0">
-          <Link
-            href="https://www.linkedin.com/in/hareeshbhittam/"
-            target="_blank"
-          >
-            <FaLinkedin
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
-          </Link>
-          <Link href="https://x.com/hareesh_bhittam" target="_blank">
-            <FaTwitter
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
-          </Link>
-          <Link href="https://github.com/Hareesh108" target="_blank">
-            <FaGithub
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
-          </Link>
-          <Link href="https://www.instagram.com/_harsh_20.6/" target="_blank">
-            <FaInstagram
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
-          </Link>
-        </div>
-
         <div className="space-y-4 mx-2 lg:mx-auto">
-          <h3 className="text-lg font-semibold">Expertise</h3>
+          <h3 className="text-lg ">Expertise</h3>
           <Skills skills={FRONTEND_SKILLS} />
           <Skills skills={DEVOPS_SKILLS} />
           <Skills skills={BACKEND_SKILLS} />

@@ -28,9 +28,9 @@ export function ThemeToggle() {
       }
     >
       {isDarkMode ? (
-        <Moon className="h-45 w-45 animate-bounce" />
+        <Moon className="h-45 w-45" />
       ) : (
-        <Sun className="h-45 w-45 animate-bounce" />
+        <Sun className="h-45 w-45" />
       )}
     </button>
   );
