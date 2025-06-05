@@ -17,8 +17,7 @@ export default function LandingPage() {
   const isDarkMode = resolvedTheme === "dark" && mounted;
 
   const [isPlaying, setIsPlaying] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const audioRef = useRef<any>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
     if (audioRef.current) {
@@ -159,7 +158,7 @@ export function Resume() {
         secondImage="/profile/harsh01.jpg"
         firstImageClassName="object-fit object-left-top"
         secondImageClassname="object-fit object-left-top"
-        className="h-[200px] sm:h-[250px] md:h-[400px] lg:h-[500px] w-[300px] lg:w-[450px] xl:w-[500px] "
+        className="h-[200px] sm:h-[250px] md:h-[400px] lg:h-[500px] w-[240px] md:w-[300px] lg:w-[450px] xl:w-[500px] "
         slideMode="hover"
       />
     </div>
