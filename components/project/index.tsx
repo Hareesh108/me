@@ -80,7 +80,7 @@ export default function ProjectPage() {
             {/* Animated Border */}
             <div className="absolute inset-0 rounded-lg animate-gradient-border-before pointer-events-none"></div>
 
-            <Card className="overflow-hidden rounded-lg w-full relative h-[400px]">
+            <Card className="overflow-hidden rounded-lg w-full relative h-[450px]">
               <CardHeader>
                 <Image
                   src={project.image}
