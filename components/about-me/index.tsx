@@ -8,7 +8,7 @@ export default function AboutMePage() {
   return (
     <div
       id="about-me"
-      className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center md:items-start justify-center max-w-screen-xl mx-4 lg:mx-auto bg-muted p-10 md:py-8 rounded-xl"
+      className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center md:items-start justify-center max-w-screen-xl mx-4 lg:mx-auto bg-muted p-3 py-5 md:p-10 md:py-8 rounded-xl"
     >
       <div className="flex flex-col gap-2 items-center md:items-start ">
         <p className="text-lg md:text-xl text-center">
