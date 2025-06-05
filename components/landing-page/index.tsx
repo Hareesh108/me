@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { Cover } from "../ui/cover";
 import { Compare } from "../ui/compare";
 import AboutMePage from "../about-me";
+import { ThemeToggle } from "../theme";
 
 export default function LandingPage() {
   const { resolvedTheme } = useTheme();
@@ -43,71 +44,76 @@ export default function LandingPage() {
         />
       )}
 
-      <div className="flex-1 flex justify-center items-center lg:justify-end w-full mt-8 ">
-        <div className="text-2xl text-center md:text-start mt-2">
+      <div className="flex-1 flex justify-center items-center lg:justify-end w-full mt-6 ">
+        <div className="text-2xl text-center md:text-start  md:mt-2">
           <Resume />
         </div>
       </div>
 
       <div className="flex flex-col gap-2  md:items-start mx-4 md:mx-auto">
-        <audio ref={audioRef} src="/music/SHAED-ZAYN-Trampoline.mp3" loop>
-          <track kind="captions" src="" label="Music captions" />
-        </audio>
-        <button
-          className=""
-          onClick={togglePlay}
-          onKeyDown={(e) => e.key === "Enter" && togglePlay()}
-          aria-label={isPlaying ? "Pause music" : "Play music"}
-          title={
-            isPlaying
-              ? "Shhh... Let’s pause the beats! 🛑"
-              : "Hit play for some good vibes! 🎵"
-          }
-        >
-          {isPlaying ? (
-            <div className="flex justify-center items-center translate-x-[1px] animate-pulse mb-4 md:mb-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-red-500"
-              >
-                <rect x="6" y="4" width="4" height="16"></rect>
-                <rect x="14" y="4" width="4" height="16"></rect>
-              </svg>
-            </div>
-          ) : (
-            <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-green-600"
-              >
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-              <span className="sr-only">Play</span>
-            </div>
-          )}
-        </button>
+        <div className="flex gap-7 justify-center mt-4">
+          <audio ref={audioRef} src="/music/SHAED-ZAYN-Trampoline.mp3" loop>
+            <track kind="captions" src="" label="Music captions" />
+          </audio>
+          <button
+            onClick={togglePlay}
+            onKeyDown={(e) => e.key === "Enter" && togglePlay()}
+            aria-label={isPlaying ? "Pause music" : "Play music"}
+            title={
+              isPlaying
+                ? "Shhh... Let’s pause the beats! 🛑"
+                : "Hit play for some good vibes! 🎵"
+            }
+          >
+            {isPlaying ? (
+              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-red-500"
+                >
+                  <rect x="6" y="4" width="4" height="16"></rect>
+                  <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+              </div>
+            ) : (
+              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-green-600"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span className="sr-only">Play</span>
+              </div>
+            )}
+          </button>
+          <div>
+            <ThemeToggle />
+          </div>
+        </div>
+
         <div className="text-2xl text-center md:text-start ">
           <Title />
         </div>
 
         <h2 className="text-2xl text-center md:text-start mt-2">
-          Creating a brighter tomorrow with technology and innovation.
+          Creating a brighter tomorrow with <br /> technology and innovation.
         </h2>
         <div className="flex justify-center md:justify-start gap-4 mt-4">
           <a href="#about-me" className="transition-transform hover:scale-105">
@@ -158,7 +164,7 @@ export function Resume() {
         secondImage="/profile/harsh01.jpg"
         firstImageClassName="object-fit object-left-top"
         secondImageClassname="object-fit object-left-top"
-        className="h-[200px] sm:h-[250px] md:h-[400px] lg:h-[500px] w-[240px] md:w-[300px] lg:w-[450px] xl:w-[500px] "
+        className="h-[250px] sm:h-[250px] md:h-[400px] lg:h-[450px] w-[250px] md:w-[300px] lg:w-[450px]"
         slideMode="hover"
       />
     </div>
