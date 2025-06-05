@@ -11,83 +11,33 @@ export default function ProjectPage() {
   return (
     <div
       id="projects"
-      className="min-h-screen max-w-screen-xl mx-4 xl:mx-auto m-8 md:mt-12"
+      className="max-w-screen-lg  mx-4 lg:mx-auto mt-8 md:mt-12"
     >
-      <div className="flex justify-center">
-        <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-          {/* Text */}
-          <text
-            x="10"
-            y="40"
-            fontFamily="Arial, sans-serif"
-            fontSize="24"
-            stroke="currentColor"
-            fill="none"
-          >
-            Featured Projects
-          </text>
-
-          {/* Gradient Definition */}
-          <defs>
-            <linearGradient
-              id="glowing-gradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-            >
-              <stop offset="0%" stopColor="#EB8317" stopOpacity="1">
-                <animate
-                  attributeName="stop-color"
-                  values="#EB8317; #F4F6FF; #EB8317"
-                  dur="3s"
-                  repeatCount="indefinite"
-                />
-              </stop>
-              <stop offset="100%" stopColor="#F4F6FF" stopOpacity="1">
-                <animate
-                  attributeName="stop-color"
-                  values="#F4F6FF; #EB8317; #F4F6FF"
-                  dur="3s"
-                  repeatCount="indefinite"
-                />
-              </stop>
-            </linearGradient>
-          </defs>
-
-          {/* Glowing Gradient Line */}
-          <rect
-            x="10"
-            y="50"
-            width="200"
-            height="4"
-            fill="url(#glowing-gradient)"
-          />
-        </svg>
-      </div>
-
+      <h1 className="text-center col-span-1 md:col-span-2 text-xl sm:text-3xl font-bold tracking-tight mb-5 sm:mb-15 dark:text-zinc-300 text-zinc-700">
+        Projects
+      </h1>
       <div className="grid gap-12 items-center justify-center md:grid-cols-3">
         {PROJECT_INFO.map((project) => (
           <motion.div
             whileHover={{
               scale: 1.02,
-              boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
+              boxShadow: "0px 4px 20px rgba(152, 152, 152, 0.2)",
             }}
             transition={{ duration: 0.3 }}
             key={project.id}
-            className="w-full p-4 shadow-lg bg-#c86f6f hover:bg-muted relative overflow-hidden"
+            className="w-full p-4 shadow-lg rounded-xl bg-#c86f6f  relative overflow-hidden"
           >
             {/* Animated Border */}
-            <div className="absolute inset-0 rounded-lg animate-gradient-border-before pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-xl border-4"></div>
 
-            <Card className="overflow-hidden rounded-lg w-full relative h-[450px]">
+            <Card className="overflow-hidden rounded-lg w-full relative h-full lg:h-[400px]">
               <CardHeader>
                 <Image
                   src={project.image}
                   alt={project.name}
-                  height={160}
+                  height={400}
                   width={400}
-                  className="w-full h-40 object-cover transition-transform duration-300 transform hover:scale-110"
+                  className="w-full object-cover transition-transform duration-300 transform hover:scale-110"
                 />
               </CardHeader>
 

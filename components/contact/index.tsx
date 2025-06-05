@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export default function ContactPage() {
   return (
-    <div className="max-w-screen-xl mt-6 md:mt-10 mb-5 mx-4 md:mx-auto bg-muted rounded-xl">
+    <div className="max-w-screen-lg mt-6 md:mt-10 mb-5 mx-4 lg:mx-auto bg-muted rounded-xl">
       <div className="flex flex-col items-center py-10 px-6 text-center">
         <div className="flex justify-center">
           <svg width="145" height="100" xmlns="http://www.w3.org/2000/svg">

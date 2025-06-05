@@ -7,9 +7,9 @@ export default function AboutMePage() {
   return (
     <div
       id="about-me"
-      className="flex flex-col md:grid md:grid-cols-3 gap-8 items-center md:items-start justify-center  max-w-screen-xl mx-4 xl:mx-auto bg-muted px-4 py-10 md:py-8 rounded-xl"
+      className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center md:items-start justify-center max-w-screen-xl mx-4 lg:mx-auto bg-muted p-10 md:py-8 rounded-xl"
     >
-      <div className="flex flex-col gap-2 items-center md:items-start mx-4 lg:mx-auto">
+      <div className="flex flex-col gap-2 items-center md:items-start ">
         <p className="text-lg md:text-xl text-center">
           I’m a Software Engineer at{" "}
           <a href="https://reldyn.co" target="_black">
@@ -48,12 +48,6 @@ export default function AboutMePage() {
             />
           </Link>
         </div>
-
-        {/* <h4 className="text-xl text-wrap text-start">
-          I am a passionate full-stack developer with expertise in building
-          dynamic, responsive applications using modern frameworks and
-          technologies.
-        </h4> */}
       </div>
 
       <div className="flex flex-col gap-2 items-start mx-4 lg:mx-auto">
@@ -65,9 +59,7 @@ export default function AboutMePage() {
           precision and care. Let’s work together to create something
           exceptional.
         </p>
-      </div>
 
-      <div className="flex flex-col gap-2 mx-4 lg:mx-auto">
         <h1 className="text-lg md:text-3xl font-bold">Book a consultation.</h1>
 
         <p className="opacity-70">

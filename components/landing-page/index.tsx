@@ -31,7 +31,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center justify-center min-h-screen max-w-screen-xl mt-16 md:mt-10 mx-4 xl:mx-auto">
+    <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center justify-center min-h-screen max-w-screen-lg mt-16 md:mt-10 mx-4 xl:mx-auto">
       {isDarkMode && (
         <Image
           src="/assets/new.svg"

@@ -28,22 +28,22 @@ export const PROJECT_INFO = [{
     "User authentication and profile management"
   ]
 },
+// {
+//   id: 2,
+//   name: "JavaScript Quiz Game",
+//   image: "/assets/project/project00.png",
+//   description: "An interactive quiz game built with JavaScript, offering users a fun way to test their knowledge on various topics. This project showcases my skills in DOM manipulation and responsive design.",
+//   link: "https://github.com/Hareesh108/JavaScript_Quiz",
+//   bullets: [
+//     "Dynamic question generation",
+//     "Real-time score tracking and feedback"
+//   ]
+// },
 {
   id: 2,
-  name: "JavaScript Quiz Game",
-  image: "/assets/project/project00.png",
-  description: "An interactive quiz game built with JavaScript, offering users a fun way to test their knowledge on various topics. This project showcases my skills in DOM manipulation and responsive design.",
-  link: "https://github.com/Hareesh108/JavaScript_Quiz",
-  bullets: [
-    "Dynamic question generation",
-    "Real-time score tracking and feedback"
-  ]
-},
-{
-  id: 3,
-  name: "Amazon Customer Sentiment Prediction using ML and DL",
+  name: "Customer Sentiment Prediction using ML",
   image: "/assets/project/project03.png",
-  description: "A machine learning model developed to analyze and predict customer sentiment from Amazon reviews. This project explores data preprocessing, model training, and sentiment analysis using natural language processing.",
+  description: "This project explores data preprocessing, model training, and sentiment analysis using natural language processing.",
   link: "https://github.com/Hareesh108/Sentiment-Prediction",
   bullets: [
     "Text preprocessing and data cleaning",

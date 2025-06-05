@@ -4,7 +4,7 @@ import { FaLinkedin, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="max-w-screen-xl mt-6 md:mt-10 mb-5 mx-4 xl:mx-auto">
+    <div className="max-w-screen-lg mt-6 md:mt-10 mb-5 mx-4 lg:mx-auto">
       <footer
         className="w-full py-4 text-center flex md:flex-row flex-col md:justify-between justify-start gap-4"
         style={{
