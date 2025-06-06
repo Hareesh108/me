@@ -129,7 +129,7 @@ export default function LandingPage() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-accent hover:text-primary"
+                  className="hover:text-primary"
                 >
                   <polygon points="5 3 19 12 5 21 5 3"></polygon>
                 </svg>
@@ -138,7 +138,7 @@ export default function LandingPage() {
             )}
           </button>
 
-          <div className=" hover:text-primary animate-bounce">
+          <div className="hover:text-primary animate-bounce">
             <ThemeToggle />
           </div>
 
