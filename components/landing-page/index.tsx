@@ -77,6 +77,14 @@ export default function LandingPage() {
       </div>
 
       <div className="flex flex-col gap-2  md:items-start mx-4 md:mx-auto">
+        <div className="text-2xl text-center md:text-start ">
+          <Title />
+        </div>
+
+        <h2 className="text-2xl text-center md:text-start">
+          Creating a brighter tomorrow with <br /> technology and innovation.
+        </h2>
+
         <div className="flex gap-7 justify-center mt-5">
           <audio ref={audioRef} src="/music/SHAED-ZAYN-Trampoline.mp3" loop>
             <track kind="captions" src="" label="Music captions" />
@@ -92,7 +100,7 @@ export default function LandingPage() {
             }
           >
             {isPlaying ? (
-              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-0">
+              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -103,7 +111,7 @@ export default function LandingPage() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-red-500"
+                  className="hover:text-primary"
                 >
                   <rect x="6" y="4" width="4" height="16"></rect>
                   <rect x="14" y="4" width="4" height="16"></rect>
@@ -121,7 +129,7 @@ export default function LandingPage() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-primary"
+                  className="text-accent hover:text-primary"
                 >
                   <polygon points="5 3 19 12 5 21 5 3"></polygon>
                 </svg>
@@ -130,7 +138,7 @@ export default function LandingPage() {
             )}
           </button>
 
-          <div className="animate-bounce">
+          <div className=" hover:text-primary animate-bounce">
             <ThemeToggle />
           </div>
 
@@ -138,71 +146,29 @@ export default function LandingPage() {
             href="https://www.linkedin.com/in/hareeshbhittam/"
             target="_blank"
             className="animate-bounce"
+            title="Connect with me on LinkedIn!"
           >
-            <FaLinkedin
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
+            <FaLinkedin size={24} className="hover:text-primary" />
           </Link>
           <Link
             href="https://x.com/hareesh_bhittam"
             target="_blank"
             className="animate-bounce"
+            title="Follow me on Twitter!"
           >
-            <FaTwitter
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
+            <FaTwitter size={24} className="hover:text-primary" />
           </Link>
           <Link
             href="https://github.com/Hareesh108"
             target="_blank"
             className="animate-bounce"
+            title="Check out my GitHub projects!"
           >
-            <FaGithub
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
+            <FaGithub size={24} className="hover:text-primary" />
           </Link>
-          {/* <div className="flex space-x-4  justify-center">
-            <Link
-              href="https://www.linkedin.com/in/hareeshbhittam/"
-              target="_blank"
-            >
-              <FaLinkedin
-                size={24}
-                className="text-primary hover:text-destructive"
-              />
-            </Link>
-            <Link href="https://x.com/hareesh_bhittam" target="_blank">
-              <FaTwitter
-                size={24}
-                className="text-primary hover:text-destructive"
-              />
-            </Link>
-            <Link href="https://github.com/Hareesh108" target="_blank">
-              <FaGithub
-                size={24}
-                className="text-primary hover:text-destructive"
-              />
-            </Link>
-            <Link href="https://www.instagram.com/_harsh_20.6/" target="_blank">
-            <FaInstagram
-              size={24}
-              className="text-primary hover:text-destructive"
-            />
-          </Link>
-          </div> */}
         </div>
 
-        <div className="text-2xl text-center md:text-start ">
-          <Title />
-        </div>
-
-        <h2 className="text-2xl text-center md:text-start">
-          Creating a brighter tomorrow with <br /> technology and innovation.
-        </h2>
-        <div className="flex justify-center md:justify-start gap-4 mt-4">
+        <div className="flex justify-center md:justify-start gap-4">
           <a href="#about-me" className="transition-transform hover:scale-105">
             <Button
               className="text-lg hover:opacity-90"
@@ -249,7 +215,7 @@ export function Resume() {
       <Compare
         firstImage="/profile/resume.png"
         secondImage="/profile/harsh01.jpg"
-        firstImageClassName="object-fit object-left-top"
+        firstImageClassName="object-fill"
         secondImageClassname="object-fit object-left-top"
         className="h-[250px] sm:h-[250px] md:h-[400px] lg:h-[450px] w-[250px] md:w-[300px] lg:w-[450px]"
         slideMode="hover"
