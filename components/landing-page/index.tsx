@@ -100,7 +100,7 @@ export default function LandingPage() {
             }
           >
             {isPlaying ? (
-              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-1">
+              <div className="flex justify-center items-center translate-x-[1px] animate-bounce hover:animate-none mb-4 md:mb-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -118,7 +118,7 @@ export default function LandingPage() {
                 </svg>
               </div>
             ) : (
-              <div className="flex justify-center items-center translate-x-[1px] animate-bounce mb-4 md:mb-1">
+              <div className="flex justify-center items-center translate-x-[1px] animate-bounce hover:animate-none mb-4 md:mb-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -138,14 +138,14 @@ export default function LandingPage() {
             )}
           </button>
 
-          <div className="hover:text-primary animate-bounce">
+          <div className="hover:text-primary animate-bounce hover:animate-none">
             <ThemeToggle />
           </div>
 
           <Link
             href="https://www.linkedin.com/in/hareeshbhittam/"
             target="_blank"
-            className="animate-bounce"
+            className="animate-bounce hover:animate-none"
             title="Connect with me on LinkedIn!"
           >
             <FaLinkedin size={24} className="hover:text-primary" />
@@ -153,7 +153,7 @@ export default function LandingPage() {
           <Link
             href="https://x.com/hareesh_bhittam"
             target="_blank"
-            className="animate-bounce"
+            className="animate-bounce hover:animate-none"
             title="Follow me on Twitter!"
           >
             <FaTwitter size={24} className="hover:text-primary" />
@@ -161,7 +161,7 @@ export default function LandingPage() {
           <Link
             href="https://github.com/Hareesh108"
             target="_blank"
-            className="animate-bounce"
+            className="animate-bounce hover:animate-none"
             title="Check out my GitHub projects!"
           >
             <FaGithub size={24} className="hover:text-primary" />
