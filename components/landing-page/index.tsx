@@ -138,10 +138,6 @@ export default function LandingPage() {
             )}
           </button>
 
-          <div className="hover:text-primary animate-bounce hover:animate-none">
-            <ThemeToggle />
-          </div>
-
           <Link
             href="https://www.linkedin.com/in/hareeshbhittam/"
             target="_blank"
@@ -166,6 +162,9 @@ export default function LandingPage() {
           >
             <FaGithub size={24} className="hover:text-primary" />
           </Link>
+          <div className="hover:text-primary animate-bounce hover:animate-none">
+            <ThemeToggle />
+          </div>
         </div>
 
         <div className="flex justify-center md:justify-start gap-4">
