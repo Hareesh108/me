@@ -100,7 +100,7 @@ export default function LandingPage() {
             }
           >
             {isPlaying ? (
-              <div className="flex justify-center items-center translate-x-[1px] animate-bounce hover:animate-none mb-4 md:mb-1">
+              <div className="flex justify-center items-center translate-x-[1px]  mb-4 md:mb-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -118,7 +118,7 @@ export default function LandingPage() {
                 </svg>
               </div>
             ) : (
-              <div className="flex justify-center items-center translate-x-[1px] animate-bounce hover:animate-none mb-4 md:mb-1">
+              <div className="flex justify-center items-center translate-x-[1px]  mb-4 md:mb-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -141,7 +141,7 @@ export default function LandingPage() {
           <Link
             href="https://www.linkedin.com/in/hareeshbhittam/"
             target="_blank"
-            className="animate-bounce hover:animate-none"
+            className=""
             title="Connect with me on LinkedIn!"
           >
             <FaLinkedin size={24} className="hover:text-primary" />
@@ -149,7 +149,7 @@ export default function LandingPage() {
           <Link
             href="https://x.com/hareesh_bhittam"
             target="_blank"
-            className="animate-bounce hover:animate-none"
+            className=""
             title="Follow me on Twitter!"
           >
             <FaTwitter size={24} className="hover:text-primary" />
@@ -157,17 +157,17 @@ export default function LandingPage() {
           <Link
             href="https://github.com/Hareesh108"
             target="_blank"
-            className="animate-bounce hover:animate-none"
+            className=""
             title="Check out my GitHub projects!"
           >
             <FaGithub size={24} className="hover:text-primary" />
           </Link>
-          <div className="hover:text-primary animate-bounce hover:animate-none">
+          <div className="hover:text-primary ">
             <ThemeToggle />
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-start gap-4">
+        <div className="flex justify-center md:justify-start gap-4 mt-2">
           <a href="#about-me" className="transition-transform hover:scale-105">
             <Button
               className="text-lg hover:opacity-90"
