@@ -26,6 +26,7 @@ export function ThemeToggle() {
           ? "Switch to light mode! Let there be light! ☀️"
           : "Embrace the dark side! We have cookies! 🌙"
       }
+      className="h-45 w-45 p-1.5"
     >
       {isDarkMode ? (
         <Moon className="h-45 w-45" />

@@ -1,15 +1,13 @@
 "use client";
 
-import React, { memo, useRef, useState } from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useTheme } from "next-themes";
 import { Cover } from "../ui/cover";
 import { Compare } from "../ui/compare";
 import AboutMePage from "../about-me";
-import { ThemeToggle } from "../theme";
-import Link from "next/link";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { SocialDialog } from "../ui/social-dialog";
 import { useWindowEvent } from "@/contexts/window-event-provider";
 
 export default function LandingPage() {
@@ -21,20 +19,6 @@ export default function LandingPage() {
   React.useEffect(() => setMounted(true), []);
 
   const isDarkMode = resolvedTheme === "dark" && mounted;
-
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
 
   const isNotTop = scrollY > 250;
 
@@ -85,89 +69,7 @@ export default function LandingPage() {
           Creating a brighter tomorrow with <br /> technology and innovation.
         </h2>
 
-        <div className="flex gap-7 justify-center mt-5">
-          <audio ref={audioRef} src="/music/SHAED-ZAYN-Trampoline.mp3" loop>
-            <track kind="captions" src="" label="Music captions" />
-          </audio>
-          <button
-            onClick={togglePlay}
-            onKeyDown={(e) => e.key === "Enter" && togglePlay()}
-            aria-label={isPlaying ? "Pause music" : "Play music"}
-            title={
-              isPlaying
-                ? "Shhh... Let’s pause the beats! 🛑"
-                : "Hit play for some good vibes! 🎵"
-            }
-          >
-            {isPlaying ? (
-              <div className="flex justify-center items-center translate-x-[1px]  mb-4 md:mb-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="hover:text-primary"
-                >
-                  <rect x="6" y="4" width="4" height="16"></rect>
-                  <rect x="14" y="4" width="4" height="16"></rect>
-                </svg>
-              </div>
-            ) : (
-              <div className="flex justify-center items-center translate-x-[1px]  mb-4 md:mb-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="26"
-                  height="26"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="hover:text-primary"
-                >
-                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-                <span className="sr-only">Play</span>
-              </div>
-            )}
-          </button>
-
-          <Link
-            href="https://www.linkedin.com/in/hareeshbhittam/"
-            target="_blank"
-            className=""
-            title="Connect with me on LinkedIn!"
-          >
-            <FaLinkedin size={24} className="hover:text-primary" />
-          </Link>
-          <Link
-            href="https://x.com/hareesh_bhittam"
-            target="_blank"
-            className=""
-            title="Follow me on Twitter!"
-          >
-            <FaTwitter size={24} className="hover:text-primary" />
-          </Link>
-          <Link
-            href="https://github.com/Hareesh108"
-            target="_blank"
-            className=""
-            title="Check out my GitHub projects!"
-          >
-            <FaGithub size={24} className="hover:text-primary" />
-          </Link>
-          <div className="hover:text-primary ">
-            <ThemeToggle />
-          </div>
-        </div>
-
-        <div className="flex justify-center md:justify-start gap-4 mt-2">
+        <div className="flex justify-center md:justify-start gap-4 mt-4">
           <a href="#about-me" className="transition-transform hover:scale-105">
             <Button
               className="text-lg hover:opacity-90"
@@ -194,6 +96,7 @@ export default function LandingPage() {
       <div className="w-full col-span-2">
         <AboutMePage />
       </div>
+      <SocialDialog />
     </div>
   );
 }

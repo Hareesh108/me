@@ -38,12 +38,12 @@ export default function AboutMePage() {
           exceptional.
         </p>
 
-        <h1 className="text-lg md:text-3xl font-bold">Book a consultation.</h1>
+        {/* <h1 className="text-lg md:text-3xl font-bold">Book a consultation.</h1>
 
         <p className="opacity-70">
           Looking for guidance on your project? Book a consultation to gain
           valuable insights and clarity for your next steps.{" "}
-        </p>
+        </p> */}
       </div>
     </div>
   );
