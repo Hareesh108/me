@@ -2,73 +2,186 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "lucide-react";
-import { Card, CardHeader, CardFooter, CardContent } from "../ui/card";
+import { ArrowUpRight, GithubIcon, Globe } from "lucide-react";
+import { Card, CardFooter, CardContent } from "../ui/card";
 import { PROJECT_INFO } from "@/lib/utils";
-import Image from "next/image";
+
+// Tech stack mapping for each project
+const PROJECT_TECHS = {
+  0: ["React", "TypeScript", "Tailwind CSS", "Redux"],
+  1: ["React", "Node.js", "MongoDB", "Express"],
+  2: ["Python", "Scikit-learn", "NLTK", "Pandas"],
+};
+
+// Add live links for projects (set to null if no live demo available)
+const PROJECT_LIVE_LINKS = {
+  0: "https://ecommerce-demo.vercel.app", // Replace with actual live link
+  1: null, // No live demo available
+  2: null, // No live demo available
+};
 
 export default function ProjectPage() {
+  const displayProjects = PROJECT_INFO.slice(0, 3); // Show only first 3 projects
+
   return (
     <div
       id="projects"
-      className="max-w-screen-lg  mx-4 lg:mx-auto mt-8 md:mt-12"
+      className="max-w-screen-lg mx-4 lg:mx-auto mt-8 md:mt-12 px-4"
     >
-      <h1 className="text-center col-span-1 md:col-span-2 text-xl sm:text-3xl font-bold tracking-tight mb-5 sm:mb-15 dark:text-zinc-300 text-zinc-700">
-        Projects
-      </h1>
-      <div className="grid gap-12 items-center justify-center md:grid-cols-3">
-        {PROJECT_INFO.map((project) => (
-          <motion.div
-            whileHover={{
-              scale: 1.02,
-              boxShadow: "0px 4px 20px rgba(152, 152, 152, 0.2)",
-            }}
-            transition={{ duration: 0.3 }}
-            key={project.id}
-            className="w-full p-4 shadow-lg rounded-xl bg-#c86f6f  relative overflow-hidden"
-          >
-            {/* Animated Border */}
-            <div className="absolute inset-0 rounded-xl border-4"></div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12"
+      >
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-foreground">
+          Featured Projects
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Here are some of my recent projects that showcase my skills and
+          passion for development.
+        </p>
+      </motion.div>
 
-            <Card className="overflow-hidden rounded-lg w-full relative h-full lg:h-[400px]">
-              <CardHeader>
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  height={400}
-                  width={400}
-                  className="w-full object-cover transition-transform duration-300 transform hover:scale-110"
+      <div className="grid gap-6 md:gap-8 lg:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-12">
+        {displayProjects.map((project, index) => {
+          const liveLink =
+            PROJECT_LIVE_LINKS[project.id as keyof typeof PROJECT_LIVE_LINKS];
+          const hasLiveDemo = liveLink !== null;
+
+          return (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -12, scale: 1.02 }}
+              className="group relative cursor-pointer"
+            >
+              {/* Floating particles effect */}
+              <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+                <div
+                  className="absolute top-4 left-4 w-2 h-2 bg-primary/30 rounded-full animate-pulse group-hover:animate-bounce"
+                  style={{ animationDelay: "0s" }}
                 />
-              </CardHeader>
+                <div
+                  className="absolute top-8 right-6 w-1 h-1 bg-primary/40 rounded-full animate-pulse group-hover:animate-bounce"
+                  style={{ animationDelay: "0.5s" }}
+                />
+                <div
+                  className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-primary/20 rounded-full animate-pulse group-hover:animate-bounce"
+                  style={{ animationDelay: "1s" }}
+                />
+              </div>
 
-              <CardContent className="p-4 text-left">
-                <h2 className="text-lg font-semibold mb-2">{project.name}</h2>
-                <p className="text-sm">{project.description}</p>
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-xl pointer-events-none" />
 
-                {/* Bullet Points */}
-                {/* <ul className="list-disc list-inside space-y-1">
-                  {project.bullets.map((bullet, index) => (
-                    <li key={index}>{bullet}</li>
-                  ))}
-                </ul> */}
-              </CardContent>
+              <Card className="relative overflow-hidden rounded-3xl bg-card border border-border shadow-lg hover:shadow-2xl transition-all duration-500 h-full backdrop-blur-sm">
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
 
-              {/* Footer with Link */}
-              <CardFooter className="pt-2 text-right">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-yellow-800 flex items-center gap-1"
-                >
-                  <Link size={16} />
-                  View Project
-                </a>
-              </CardFooter>
-            </Card>
-          </motion.div>
-        ))}
+                {/* Shimmer effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    {/* Project title with glow effect */}
+                    <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 relative">
+                      {project.name}
+                      <div className="absolute inset-0 bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    </h3>
+
+                    {/* Project description */}
+                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                      {project.description}
+                    </p>
+
+                    {/* Tech stack with staggered animation */}
+                    <div className="flex flex-wrap gap-2">
+                      {PROJECT_TECHS[
+                        project.id as keyof typeof PROJECT_TECHS
+                      ]?.map((tech, techIndex) => (
+                        <motion.span
+                          key={techIndex}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: techIndex * 0.1 }}
+                          whileHover={{ scale: 1.05, y: -2 }}
+                          className="px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full border border-border hover:bg-primary/10 hover:text-primary hover:border-primary/30 transition-all duration-300 cursor-default"
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+
+                {/* Footer with flexible buttons */}
+                <CardFooter className="p-6 pt-0">
+                  <div
+                    className={`w-full flex gap-3 ${
+                      hasLiveDemo ? "" : "justify-center"
+                    }`}
+                  >
+                    <motion.a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-xl transition-all duration-300 group-hover:shadow-lg cursor-pointer ${
+                        hasLiveDemo ? "flex-1" : "w-full"
+                      }`}
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <GithubIcon className="w-4 h-4" />
+                      <span>GitHub</span>
+                    </motion.a>
+
+                    {hasLiveDemo && (
+                      <motion.a
+                        href={liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium rounded-xl transition-all duration-300 group-hover:shadow-lg cursor-pointer"
+                        whileHover={{ scale: 1.02, y: -2 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Globe className="w-4 h-4" />
+                        <span>Live</span>
+                      </motion.a>
+                    )}
+                  </div>
+                </CardFooter>
+              </Card>
+            </motion.div>
+          );
+        })}
       </div>
+
+      {/* See More Button with enhanced effects */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="text-center"
+      >
+        <motion.a
+          href="https://github.com/Hareesh108"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold rounded-2xl hover:shadow-xl transition-all duration-300 border border-border relative overflow-hidden group cursor-pointer"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {/* Shimmer effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
+
+          <GithubIcon className="w-5 h-5 relative z-10" />
+          <span className="relative z-10">See More Projects</span>
+          <ArrowUpRight className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </motion.a>
+      </motion.div>
     </div>
   );
 }
