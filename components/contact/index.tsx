@@ -6,10 +6,7 @@ import { Mail, MessageCircle, ArrowUpRight, Sparkles } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div
-      id="contact"
-      className="max-w-screen-lg mx-4 lg:mx-auto mt-8 md:mt-12 px-4"
-    >
+    <div id="contact" className="max-w-screen-lg mx-4 lg:mx-auto mt-8 md:mt-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

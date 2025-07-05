@@ -49,15 +49,9 @@ export default function Footer() {
         {/* Glowing border effect */}
         <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 opacity-0 hover:opacity-100 transition-all duration-700 blur-md sm:blur-lg md:blur-xl pointer-events-none" />
 
-        <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl transition-all duration-500 overflow-hidden">
-          {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 opacity-0 hover:opacity-100 transition-all duration-700 pointer-events-none" />
-
-          {/* Shimmer effect on hover */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
-
+        <div className="relative transition-all duration-500 overflow-hidden">
           <div className="relative p-6 md:p-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6">
               {/* Social Links */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -128,7 +122,7 @@ export default function Footer() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-center gap-4"
+                className="flex flex-col sm:flex-row items-center gap-4 mb-6 md:mb-0"
               >
                 {/* Copyright */}
                 <motion.div
