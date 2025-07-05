@@ -61,7 +61,7 @@ export default function LandingPage() {
       {/* Animated Grid Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden">
         {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0 opacity-15 animate-color-shift">
           <svg
             className="w-full h-full"
             xmlns="http://www.w3.org/2000/svg"
@@ -92,100 +92,166 @@ export default function LandingPage() {
         <div className="absolute inset-0">
           {/* Top Row Grids */}
           <div
-            className="absolute top-8 left-1/4 w-16 h-16 border border-primary/30 animate-pulse"
+            className="absolute top-8 left-1/4 w-16 h-16 border border-primary/30 animate-grid-pulse"
             style={{ animationDelay: "0s" }}
           />
           <div
-            className="absolute top-8 right-1/4 w-16 h-16 border border-primary/25 animate-pulse"
+            className="absolute top-8 right-1/4 w-16 h-16 border border-primary/25 animate-grid-pulse"
             style={{ animationDelay: "0.5s" }}
           />
           <div
-            className="absolute top-8 left-1/2 w-16 h-16 border border-primary/35 animate-pulse"
+            className="absolute top-8 left-1/2 w-16 h-16 border border-primary/35 animate-grid-pulse"
             style={{ animationDelay: "1s" }}
           />
 
           {/* Middle Row Grids */}
           <div
-            className="absolute top-1/2 left-8 w-16 h-16 border border-primary/40 animate-pulse"
+            className="absolute top-1/2 left-8 w-16 h-16 border border-primary/40 animate-grid-pulse"
             style={{ animationDelay: "0.3s" }}
           />
           <div
-            className="absolute top-1/2 right-8 w-16 h-16 border border-primary/30 animate-pulse"
+            className="absolute top-1/2 right-8 w-16 h-16 border border-primary/30 animate-grid-pulse"
             style={{ animationDelay: "0.8s" }}
           />
           <div
-            className="absolute top-1/2 left-1/3 w-16 h-16 border border-primary/25 animate-pulse"
+            className="absolute top-1/2 left-1/3 w-16 h-16 border border-primary/25 animate-grid-pulse"
             style={{ animationDelay: "1.3s" }}
           />
           <div
-            className="absolute top-1/2 right-1/3 w-16 h-16 border border-primary/35 animate-pulse"
+            className="absolute top-1/2 right-1/3 w-16 h-16 border border-primary/35 animate-grid-pulse"
             style={{ animationDelay: "1.8s" }}
           />
 
           {/* Bottom Row Grids */}
           <div
-            className="absolute bottom-8 left-1/4 w-16 h-16 border border-primary/30 animate-pulse"
+            className="absolute bottom-8 left-1/4 w-16 h-16 border border-primary/30 animate-grid-pulse"
             style={{ animationDelay: "0.2s" }}
           />
           <div
-            className="absolute bottom-8 right-1/4 w-16 h-16 border border-primary/25 animate-pulse"
+            className="absolute bottom-8 right-1/4 w-16 h-16 border border-primary/25 animate-grid-pulse"
             style={{ animationDelay: "0.7s" }}
           />
           <div
-            className="absolute bottom-8 left-1/2 w-16 h-16 border border-primary/40 animate-pulse"
+            className="absolute bottom-8 left-1/2 w-16 h-16 border border-primary/40 animate-grid-pulse"
             style={{ animationDelay: "1.2s" }}
           />
-        </div>
 
-        {/* Traversing Color Lines - Middle Areas */}
-        <div className="absolute inset-0">
-          {/* Vertical Traversing Lines in Middle */}
+          {/* Enhanced Rotating Grid Boxes */}
           <div
-            className="absolute left-1/4 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-primary/50 to-transparent animate-traverse-vertical"
-            style={{ animationDelay: "0s", animationDuration: "4s" }}
+            className="absolute top-1/4 left-1/6 w-12 h-12 border border-primary/20 animate-grid-rotate"
+            style={{ animationDelay: "0s", animationDuration: "15s" }}
           />
           <div
-            className="absolute left-1/2 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-primary/40 to-transparent animate-traverse-vertical"
-            style={{ animationDelay: "2s", animationDuration: "5s" }}
-          />
-          <div
-            className="absolute right-1/4 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-primary/45 to-transparent animate-traverse-vertical"
-            style={{ animationDelay: "1s", animationDuration: "4.5s" }}
-          />
-          <div
-            className="absolute right-1/3 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-primary/35 to-transparent animate-traverse-vertical"
-            style={{ animationDelay: "3s", animationDuration: "6s" }}
-          />
-
-          {/* Horizontal Traversing Lines in Middle */}
-          <div
-            className="absolute left-0 top-1/4 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-traverse-horizontal-middle"
-            style={{ animationDelay: "0.5s", animationDuration: "4s" }}
-          />
-          <div
-            className="absolute left-0 top-1/2 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-traverse-horizontal-middle"
-            style={{ animationDelay: "2.5s", animationDuration: "5s" }}
-          />
-          <div
-            className="absolute left-0 top-3/4 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/45 to-transparent animate-traverse-horizontal-middle"
-            style={{ animationDelay: "1.5s", animationDuration: "4.5s" }}
-          />
-          <div
-            className="absolute left-0 top-1/3 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/35 to-transparent animate-traverse-horizontal-middle"
-            style={{ animationDelay: "3.5s", animationDuration: "6s" }}
+            className="absolute bottom-1/4 right-1/6 w-12 h-12 border border-primary/20 animate-grid-rotate"
+            style={{ animationDelay: "2s", animationDuration: "18s" }}
           />
         </div>
 
-        {/* Diagonal Traversing Lines */}
+        {/* Enhanced Rotating Elements */}
         <div className="absolute inset-0">
+          {/* Rotating Rectangles */}
           <div
-            className="absolute top-0 left-0 w-1 h-1 bg-primary/60 animate-traverse-diagonal"
-            style={{ animationDelay: "0s", animationDuration: "8s" }}
+            className="absolute top-1/4 left-1/8 w-8 h-8 border border-primary/25 animate-grid-rotate"
+            style={{ animationDelay: "0s", animationDuration: "12s" }}
           />
           <div
-            className="absolute top-0 right-0 w-1 h-1 bg-primary/50 animate-traverse-diagonal-reverse"
-            style={{ animationDelay: "4s", animationDuration: "8s" }}
+            className="absolute top-1/3 right-1/8 w-6 h-6 border border-primary/30 animate-grid-rotate"
+            style={{ animationDelay: "2s", animationDuration: "15s" }}
           />
+          <div
+            className="absolute bottom-1/3 left-1/6 w-10 h-10 border border-primary/20 animate-grid-rotate"
+            style={{ animationDelay: "4s", animationDuration: "18s" }}
+          />
+          <div
+            className="absolute bottom-1/4 right-1/6 w-7 h-7 border border-primary/35 animate-grid-rotate"
+            style={{ animationDelay: "1s", animationDuration: "14s" }}
+          />
+          <div
+            className="absolute top-2/3 left-1/4 w-5 h-5 border border-primary/25 animate-grid-rotate"
+            style={{ animationDelay: "3s", animationDuration: "16s" }}
+          />
+          <div
+            className="absolute top-1/2 right-1/3 w-9 h-9 border border-primary/30 animate-grid-rotate"
+            style={{ animationDelay: "5s", animationDuration: "20s" }}
+          />
+
+          {/* Pulsing Circles */}
+          <div
+            className="absolute top-1/6 left-1/3 w-3 h-3 bg-primary/20 rounded-full animate-grid-pulse"
+            style={{ animationDelay: "0s" }}
+          />
+          <div
+            className="absolute bottom-1/6 right-1/3 w-4 h-4 bg-primary/15 rounded-full animate-grid-pulse"
+            style={{ animationDelay: "1.5s" }}
+          />
+          <div
+            className="absolute top-3/4 left-1/5 w-2 h-2 bg-primary/25 rounded-full animate-grid-pulse"
+            style={{ animationDelay: "3s" }}
+          />
+          <div
+            className="absolute bottom-1/3 right-1/5 w-3 h-3 bg-primary/20 rounded-full animate-grid-pulse"
+            style={{ animationDelay: "4.5s" }}
+          />
+
+          {/* Floating Geometric Shapes */}
+          <div
+            className="absolute top-1/5 right-1/5 w-4 h-4 border border-primary/30 rotate-45 animate-float-up"
+            style={{ animationDelay: "0s", animationDuration: "10s" }}
+          />
+          <div
+            className="absolute bottom-1/5 left-1/4 w-3 h-3 border border-primary/25 rotate-45 animate-float-up"
+            style={{ animationDelay: "5s", animationDuration: "12s" }}
+          />
+
+          {/* Stars in Middle 2/3 Area */}
+          <div
+            className="absolute top-1/6 left-1/2 w-2 h-2 text-primary/40 animate-pulse"
+            style={{ animationDelay: "0s" }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div
+            className="absolute top-1/3 right-1/4 w-1.5 h-1.5 text-primary/30 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div
+            className="absolute top-1/2 left-1/3 w-2.5 h-2.5 text-primary/35 animate-pulse"
+            style={{ animationDelay: "2s" }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div
+            className="absolute top-2/3 right-1/3 w-1.5 h-1.5 text-primary/25 animate-pulse"
+            style={{ animationDelay: "3s" }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div
+            className="absolute top-5/6 left-1/4 w-2 h-2 text-primary/40 animate-pulse"
+            style={{ animationDelay: "4s" }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div
+            className="absolute top-3/4 right-1/5 w-1.5 h-1.5 text-primary/30 animate-pulse"
+            style={{ animationDelay: "5s" }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
         </div>
       </div>
 
@@ -214,6 +280,20 @@ export default function LandingPage() {
         <div
           className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-primary/15 rounded-full animate-pulse"
           style={{ animationDelay: "2.5s" }}
+        />
+
+        {/* Enhanced Floating Particles */}
+        <div
+          className="absolute bottom-0 left-1/5 w-1 h-1 bg-primary/40 rounded-full animate-float-up"
+          style={{ animationDelay: "0s", animationDuration: "8s" }}
+        />
+        <div
+          className="absolute bottom-0 right-1/4 w-1.5 h-1.5 bg-primary/30 rounded-full animate-float-up"
+          style={{ animationDelay: "3s", animationDuration: "10s" }}
+        />
+        <div
+          className="absolute bottom-0 left-1/2 w-1 h-1 bg-primary/25 rounded-full animate-float-up"
+          style={{ animationDelay: "6s", animationDuration: "12s" }}
         />
       </div>
 
