@@ -235,7 +235,7 @@ export default function LandingPage() {
               className="relative w-full rounded-3xl dark:bg-neutral-900 bg-neutral-100 border-neutral-200 dark:border-neutral-800 shadow-lg hover:shadow-2xl transition-all duration-500"
             >
               {/* Shimmer effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-full transition-transform duration-1000 rounded-3xl" />
+              <div className="absolute hidden md:block inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-full transition-transform duration-1000 rounded-3xl" />
 
               <Compare
                 firstImage="/profile/resume.png"
@@ -276,16 +276,16 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4"
+            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4 w-full"
           >
             <motion.a
               href="#about-me"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="transition-all duration-300"
+              className="transition-all duration-300 w-full sm:w-auto"
             >
               <Button
-                className="text-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-full sm:w-auto text-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border shadow-lg hover:shadow-xl transition-all duration-300"
                 variant="secondary"
                 size="lg"
               >
@@ -298,10 +298,10 @@ export default function LandingPage() {
               href="mailto:hareeshbhittam@email.com"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="transition-all duration-300"
+              className="transition-all duration-300 w-full sm:w-auto"
             >
               <Button
-                className="text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-full sm:w-auto text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
                 variant="default"
                 size="lg"
               >

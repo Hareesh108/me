@@ -10,7 +10,7 @@ export default function AboutMePage() {
   return (
     <div
       id="about-me"
-      className="max-w-screen-lg mx-4 lg:mx-auto mt-8 md:mt-12 px-4"
+      className="max-w-screen-lg mx-0.5 lg:mx-auto mt-8 md:mt-12 px-4"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
