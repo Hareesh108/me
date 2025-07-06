@@ -58,7 +58,7 @@ export default function ContactPage() {
           {/* Shimmer effect on hover */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
 
-          <div className="relative p-8 md:p-12">
+          <div className="relative p-6 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
               {/* Left Column - Contact Info */}
               <motion.div

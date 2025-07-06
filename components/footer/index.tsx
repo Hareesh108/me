@@ -57,7 +57,7 @@ export default function Footer() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex items-center gap-4"
+                className="hidden md:flex items-center gap-4"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -122,7 +122,7 @@ export default function Footer() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-center gap-4 mb-6 md:mb-0"
+                className="flex flex-col sm:flex-row items-center gap-4 mb-20 md:mb-0"
               >
                 {/* Copyright */}
                 <motion.div

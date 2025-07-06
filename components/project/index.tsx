@@ -7,26 +7,17 @@ import { Card, CardFooter, CardContent } from "../ui/card";
 import { PROJECT_INFO } from "@/lib/utils";
 
 // Tech stack mapping for each project
-const PROJECT_TECHS = {
-  0: ["React", "TypeScript", "Tailwind CSS", "Redux"],
-  1: ["React", "Node.js", "MongoDB", "Express"],
-  2: ["Python", "Scikit-learn", "NLTK", "Pandas"],
-};
-
-// Add live links for projects (set to null if no live demo available)
-const PROJECT_LIVE_LINKS = {
-  0: "https://ecommerce-demo.vercel.app", // Replace with actual live link
-  1: null, // No live demo available
-  2: null, // No live demo available
-};
+// const PROJECT_TECHS = {
+//   0: ["React", "TypeScript", "Tailwind CSS", "Redux"],
+//   1: ["React", "Node.js", "MongoDB", "Express"],
+//   2: ["Python", "Scikit-learn", "NLTK", "Pandas"],
+// };
 
 export default function ProjectPage() {
-  const displayProjects = PROJECT_INFO.slice(0, 3); // Show only first 3 projects
-
   return (
     <div
       id="projects"
-      className="max-w-screen-lg mx-4 lg:mx-auto mt-8 md:mt-12 px-4"
+      className="max-w-screen-lg lg:mx-auto mt-8 md:mt-12 px-4"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -44,11 +35,7 @@ export default function ProjectPage() {
       </motion.div>
 
       <div className="grid gap-6 md:gap-8 lg:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-12">
-        {displayProjects.map((project, index) => {
-          const liveLink =
-            PROJECT_LIVE_LINKS[project.id as keyof typeof PROJECT_LIVE_LINKS];
-          const hasLiveDemo = liveLink !== null;
-
+        {PROJECT_INFO.map((project, index) => {
           return (
             <motion.div
               key={project.id}
@@ -99,9 +86,7 @@ export default function ProjectPage() {
 
                     {/* Tech stack with staggered animation */}
                     <div className="flex flex-wrap gap-2">
-                      {PROJECT_TECHS[
-                        project.id as keyof typeof PROJECT_TECHS
-                      ]?.map((tech, techIndex) => (
+                      {project?.tech?.map((tech, techIndex) => (
                         <motion.span
                           key={techIndex}
                           initial={{ opacity: 0, scale: 0.8 }}
@@ -121,7 +106,7 @@ export default function ProjectPage() {
                 <CardFooter className="p-6 pt-0">
                   <div
                     className={`w-full flex gap-3 ${
-                      hasLiveDemo ? "" : "justify-center"
+                      project?.live ? "" : "justify-center"
                     }`}
                   >
                     <motion.a
@@ -129,7 +114,7 @@ export default function ProjectPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-xl transition-all duration-300 group-hover:shadow-lg cursor-pointer ${
-                        hasLiveDemo ? "flex-1" : "w-full"
+                        project?.live ? "flex-1" : "w-full"
                       }`}
                       whileHover={{ scale: 1.02, y: -2 }}
                       whileTap={{ scale: 0.98 }}
@@ -138,9 +123,9 @@ export default function ProjectPage() {
                       <span>GitHub</span>
                     </motion.a>
 
-                    {hasLiveDemo && (
+                    {project?.live && (
                       <motion.a
-                        href={liveLink}
+                        href={project?.live}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium rounded-xl transition-all duration-300 group-hover:shadow-lg cursor-pointer"

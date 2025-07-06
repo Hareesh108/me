@@ -64,12 +64,15 @@ export function SocialDialog({ className }: SocialDialogProps) {
         {/* Glowing border effect */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 opacity-0 hover:opacity-100 transition-all duration-700 blur-md pointer-events-none" />
 
-        <div className="relative bg-background/90 backdrop-blur-md border border-border/50 rounded-2xl transition-all duration-500 overflow-hidden">
+        <div className="relative bg-white/10 dark:bg-black/10 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl transition-all duration-500 overflow-hidden shadow-2xl">
+          {/* Glass gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/5 to-white/10 dark:from-white/5 dark:via-transparent dark:to-white/5" />
+
           {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 opacity-0 hover:opacity-100 transition-all duration-700 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-0 hover:opacity-100 transition-all duration-700 pointer-events-none" />
 
           {/* Shimmer effect on hover */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
 
           <div className="relative px-6 py-3">
             <div className="flex items-center gap-4">
@@ -95,7 +98,7 @@ export function SocialDialog({ className }: SocialDialogProps) {
                       ? "Shhh... Let's pause the beats! 🛑"
                       : "Hit play for some good vibes! 🎵"
                   }
-                  className="flex items-center justify-center w-10 h-10 bg-primary/10 hover:bg-primary/20 text-primary rounded-xl transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 hover:bg-white/30 dark:hover:bg-white/20 text-primary rounded-xl transition-all duration-300 shadow-lg"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -139,7 +142,7 @@ export function SocialDialog({ className }: SocialDialogProps) {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl hover:bg-accent transition-all duration-300 group"
+                      className="flex items-center justify-center w-10 h-10 bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 hover:bg-white/30 dark:hover:bg-white/20 rounded-xl transition-all duration-300 shadow-lg group"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                       title={social.title}
@@ -158,7 +161,7 @@ export function SocialDialog({ className }: SocialDialogProps) {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-                className="flex items-center justify-center w-10 h-10 bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl hover:bg-accent transition-all duration-300"
+                className="flex items-center justify-center w-10 h-10 bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 hover:bg-white/30 dark:hover:bg-white/20 rounded-xl transition-all duration-300 shadow-lg"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

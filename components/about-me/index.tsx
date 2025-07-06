@@ -10,7 +10,7 @@ export default function AboutMePage() {
   return (
     <div
       id="about-me"
-      className="max-w-screen-lg mx-0.5 lg:mx-auto mt-8 md:mt-12 px-4"
+      className="max-w-screen-lg lg:mx-auto mt-8 md:mt-12 px-1 md:px-4"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export default function AboutMePage() {
           {/* Shimmer effect on hover */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
 
-          <div className="relative p-8 md:p-12">
+          <div className="relative p-6 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
               {/* Left Column - Current Role & Skills */}
               <motion.div
