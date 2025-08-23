@@ -64,27 +64,27 @@ export default function ProjectPage() {
               {/* Glowing border effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-xl pointer-events-none" />
 
-              <Card className="relative overflow-hidden rounded-3xl bg-card border border-border shadow-lg hover:shadow-2xl transition-all duration-500 h-full backdrop-blur-sm">
+              <Card className="relative overflow-hidden rounded-3xl bg-card border border-border shadow-lg hover:shadow-2xl transition-all duration-500 h-full backdrop-blur-sm group flex flex-col">
                 {/* Animated gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
 
                 {/* Shimmer effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
 
-                <CardContent className="p-6">
-                  <div className="space-y-4">
+                <CardContent className="p-6 flex-1 flex flex-col">
+                  <div className="space-y-4 flex-1">
                     {/* Project title with glow effect */}
                     <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 relative">
                       {project.name}
                       <div className="absolute inset-0 bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </h3>
 
-                    {/* Project description */}
-                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                      {project.description}
-                    </p>
+                    {/* Project description with fixed height and ellipsis */}
+                    <div className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300 h-40 overflow-hidden">
+                      <div className="line-clamp-6">{project.description}</div>
+                    </div>
 
-                    {/* Tech stack with staggered animation */}
+                    {/* Tech stack with staggered animation - aligned at bottom */}
                     <div className="flex flex-wrap gap-2">
                       {project?.tech?.map((tech, techIndex) => (
                         <motion.span
@@ -103,7 +103,7 @@ export default function ProjectPage() {
                 </CardContent>
 
                 {/* Footer with flexible buttons */}
-                <CardFooter className="p-6 pt-0">
+                <CardFooter className="p-6 pt-0 mt-auto">
                   <div
                     className={`w-full flex gap-3 ${
                       project?.live ? "" : "justify-center"
