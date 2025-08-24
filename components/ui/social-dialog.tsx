@@ -16,7 +16,7 @@ interface SocialDialogProps {
   className?: string;
 }
 
-export function SocialDialog({ className }: SocialDialogProps) {
+export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -118,18 +118,21 @@ export function SocialDialog({ className }: SocialDialogProps) {
               <div className="flex items-center gap-2">
                 {[
                   {
+                    id: 0,
                     href: "https://www.linkedin.com/in/hareeshbhittam/",
                     icon: FaLinkedin,
                     label: "LinkedIn",
                     title: "Connect with me on LinkedIn!",
                   },
                   {
+                    id: 1,
                     href: "https://x.com/hareesh_bhittam",
                     icon: FaTwitter,
                     label: "Twitter",
                     title: "Follow me on Twitter!",
                   },
                   {
+                    id: 2,
                     href: "https://github.com/Hareesh108",
                     icon: FaGithub,
                     label: "GitHub",
@@ -137,7 +140,7 @@ export function SocialDialog({ className }: SocialDialogProps) {
                   },
                 ].map((social, index) => (
                   <motion.div
-                    key={social.label}
+                    key={social.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}

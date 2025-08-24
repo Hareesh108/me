@@ -58,7 +58,6 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <WindowEventProvider>
-          {/* <BottomNavbar /> */}
           <ThemeProvider>{children}</ThemeProvider>
         </WindowEventProvider>
       </body>

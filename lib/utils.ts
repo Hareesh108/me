@@ -39,7 +39,7 @@ export const PROJECT_INFO = [
     tech: ["Compiler", "JavaScript", "Node.js", "AST Parser", "Type Checker"],
   },
   {
-    id: 1,
+    id: 2,
     name: "Next.js 15 Snippets",
     image: "/assets/project/nextjs-snippets.png",
     description:
@@ -54,7 +54,7 @@ export const PROJECT_INFO = [
     tech: ["VS Code Extension", "Next.js", "App Router", "Server Actions"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Advanced React Snippets",
     image: "/assets/project/react-snippets.png",
     description:
@@ -74,7 +74,7 @@ export const PROJECT_INFO = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "E-Commerce Website",
     image: "/assets/project/project01.png",
     description:

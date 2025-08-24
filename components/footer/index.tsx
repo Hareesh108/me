@@ -76,28 +76,32 @@ export default function Footer() {
                 <div className="flex gap-3">
                   {[
                     {
+                      id: 0,
                       href: "https://www.linkedin.com/in/hareeshbhittam/",
                       icon: FaLinkedin,
                       label: "LinkedIn",
                     },
                     {
+                      id: 1,
                       href: "https://x.com/hareesh_bhittam",
                       icon: FaTwitter,
                       label: "Twitter",
                     },
                     {
+                      id: 2,
                       href: "https://github.com/Hareesh108",
                       icon: FaGithub,
                       label: "GitHub",
                     },
                     {
+                      id: 3,
                       href: "https://www.instagram.com/_harsh_20.6/",
                       icon: FaInstagram,
                       label: "Instagram",
                     },
                   ].map((social, index) => (
                     <motion.a
-                      key={social.label}
+                      key={social.id}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -160,6 +164,7 @@ export default function Footer() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
+                  key="back-to-top-button"
                 >
                   <ArrowUp className="w-4 h-4" />
                 </motion.button>
