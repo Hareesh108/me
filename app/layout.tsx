@@ -16,8 +16,34 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hareesh Bhittam",
-  description: "",
+  title: {
+    default: "Hareesh Bhittam",
+    template: "%s | Hareesh Bhittam",
+  },
+  description:
+    "Full-stack developer specializing in React, Next.js, TypeScript, and Spring Boot.",
+  keywords: [
+    "Hareesh Bhittam",
+    "React",
+    "Next.js",
+    "Spring Boot",
+    "Full-Stack Developer",
+  ],
+  authors: [{ name: "Hareesh Bhittam" }],
+  openGraph: {
+    title: "Hareesh Bhittam",
+    description:
+      "Full-stack developer specializing in modern web applications.",
+    url: "https://hareesh.is-a.dev",
+    siteName: "Hareesh Bhittam",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    title: "Hareesh Bhittam",
+    description: "Full-stack developer portfolio",
+    creator: "@hareesh_bhittam",
+  },
 };
 
 export default function RootLayout({
