@@ -167,6 +167,7 @@ export default function Footer() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   key="back-to-top-button"
+                  aria-label="Back to Top"
                 >
                   <ArrowUp className="w-4 h-4" />
                 </motion.button>

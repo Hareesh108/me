@@ -173,6 +173,7 @@ export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
                 className="flex items-center justify-center w-10 h-10 bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 hover:bg-white/30 dark:hover:bg-white/20 rounded-xl transition-all duration-300 shadow-lg"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                title="Toggle theme"
               >
                 <ThemeToggle />
               </motion.div>
@@ -183,7 +184,7 @@ export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.1 }}
                 className="flex items-center justify-center w-8 h-8"
-                aria-label="Decorative Star"
+                title="Decorative Star"
               >
                 <FaStar className="w-4 h-4 text-primary/60 animate-pulse" />
               </motion.div>

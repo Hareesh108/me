@@ -114,6 +114,7 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
                 className="flex items-center justify-center w-10 h-10 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label={isPlaying ? "Pause carousel" : "Play carousel"}
               >
                 {isPlaying ? (
                   <Pause className="w-4 h-4" />
