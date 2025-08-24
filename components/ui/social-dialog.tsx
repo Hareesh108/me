@@ -87,7 +87,11 @@ export function SocialDialog({ className }: SocialDialogProps) {
                   src="/music/SHAED-ZAYN-Trampoline.mp3"
                   loop
                 >
-                  <track kind="captions" src="" label="Music captions" />
+                  <track
+                    kind="captions"
+                    src="Trampoline Song"
+                    label="Music captions"
+                  />
                 </audio>
                 <motion.button
                   onClick={togglePlay}

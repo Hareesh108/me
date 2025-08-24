@@ -7,7 +7,7 @@ import Tech from "@/components/tech";
 export default function Home() {
   return (
     <>
-      <LandingPage />
+      <LandingPage key="landing-page" />
 
       <ProjectPage />
 
