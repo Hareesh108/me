@@ -319,7 +319,7 @@ export default function LandingPage() {
 
               <Compare
                 firstImage="/profile/resume.png"
-                secondImage="/profile/harsh01.jpg"
+                secondImage="/profile/coder.jpg"
                 firstImageClassName="object-fill"
                 secondImageClassname="object-fit object-left-top"
                 className="h-[250px] sm:h-[250px] md:h-[400px] lg:h-[450px] w-[250px] md:w-[300px] lg:w-[450px] relative z-10"
