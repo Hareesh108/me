@@ -318,10 +318,10 @@ export default function LandingPage() {
               <div className="absolute hidden md:block inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-full transition-transform duration-1000 rounded-3xl" />
 
               <Compare
-                firstImage="/profile/resume.png"
+                firstImage="/profile/resume4.png"
                 secondImage="/profile/coder.jpg"
-                firstImageClassName="object-fill"
-                secondImageClassname="object-fit object-left-top"
+                firstImageClassName="object-cover"
+                secondImageClassname="object-cover"
                 className="h-[250px] sm:h-[250px] md:h-[400px] lg:h-[450px] w-[250px] md:w-[300px] lg:w-[450px] relative z-10"
                 slideMode="hover"
               />
