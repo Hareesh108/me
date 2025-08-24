@@ -6,13 +6,6 @@ import { ArrowUpRight, GithubIcon, Globe } from "lucide-react";
 import { Card, CardFooter, CardContent } from "../ui/card";
 import { PROJECT_INFO } from "@/lib/utils";
 
-// Tech stack mapping for each project
-// const PROJECT_TECHS = {
-//   0: ["React", "TypeScript", "Tailwind CSS", "Redux"],
-//   1: ["React", "Node.js", "MongoDB", "Express"],
-//   2: ["Python", "Scikit-learn", "NLTK", "Pandas"],
-// };
-
 export default function ProjectPage() {
   return (
     <div
@@ -74,10 +67,10 @@ export default function ProjectPage() {
                 <CardContent className="p-6 flex-1 flex flex-col">
                   <div className="space-y-4 flex-1">
                     {/* Project title with glow effect */}
-                    <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 relative">
+                    <h2 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 relative">
                       {project.name}
                       <div className="absolute inset-0 bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    </h3>
+                    </h2>
 
                     {/* Project description with fixed height and ellipsis */}
                     <div className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300 h-40 overflow-hidden">
@@ -113,6 +106,7 @@ export default function ProjectPage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`View ${project.name} on GitHub`}
                       className={`flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-xl transition-all duration-300 group-hover:shadow-lg cursor-pointer ${
                         project?.live ? "flex-1" : "w-full"
                       }`}
@@ -128,6 +122,7 @@ export default function ProjectPage() {
                         href={project?.live}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`View ${project.name} live`}
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium rounded-xl transition-all duration-300 group-hover:shadow-lg cursor-pointer"
                         whileHover={{ scale: 1.02, y: -2 }}
                         whileTap={{ scale: 0.98 }}

@@ -149,6 +149,7 @@ export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={social.label}
                       className="flex items-center justify-center w-10 h-10 bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 hover:bg-white/30 dark:hover:bg-white/20 rounded-xl transition-all duration-300 shadow-lg group"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
@@ -156,6 +157,7 @@ export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
                     >
                       <social.icon
                         size={18}
+                        aria-hidden="true"
                         className="text-primary group-hover:text-primary/80 transition-colors duration-300"
                       />
                     </motion.a>
@@ -181,6 +183,7 @@ export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.1 }}
                 className="flex items-center justify-center w-8 h-8"
+                aria-label="Decorative Star"
               >
                 <FaStar className="w-4 h-4 text-primary/60 animate-pulse" />
               </motion.div>

@@ -103,6 +103,7 @@ export default function Footer() {
                     <motion.a
                       key={social.id}
                       href={social.href}
+                      aria-label={social.label}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-10 h-10 bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl hover:bg-accent transition-all duration-300 group"
@@ -114,6 +115,7 @@ export default function Footer() {
                     >
                       <social.icon
                         size={18}
+                        aria-hidden="true"
                         className="text-primary group-hover:text-primary/80 transition-colors duration-300"
                       />
                     </motion.a>
