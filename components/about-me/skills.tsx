@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
 import { Badge } from "../ui/badge";
@@ -42,10 +43,10 @@ export const Skills = ({
       initial="hidden"
       animate="visible"
     >
-      {skills.map((skill, index) => (
+      {skills.map((skill) => (
         <motion.div
-          key={index}
-          variants={badgeVariants}
+          key={skill.name}
+          variants={badgeVariants as any}
           whileHover={{
             scale: 1.1,
             backgroundColor:
