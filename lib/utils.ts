@@ -24,6 +24,23 @@ export const PROJECT_INFO = [
   },
   {
     id: 1,
+    name: "HaruDB",
+    image: "/assets/project/harudb.png",
+    description:
+      "A lightweight, embedded database written in Go. Designed for simplicity and speed, HaruDB provides a JSON-based storage engine with Write-Ahead Logging (WAL) for durability and crash recovery. Perfect for local apps, prototyping, and lightweight persistence without external dependencies.",
+    link: "https://github.com/Hareesh108/haruDB",
+    live: "",
+    bullets: [
+      "Embedded key-value store written in Go",
+      "JSON-based storage engine with durability",
+      "Write-Ahead Log (WAL) for crash recovery",
+      "Lightweight and dependency-free, ideal for local persistence",
+      "Simple CLI for installation and management",
+    ],
+    tech: ["Go", "Embedded Database", "WAL", "JSON Storage"],
+  },
+  {
+    id: 2,
     name: "Unify-JS",
     image: "/assets/project/unify-js.png",
     description:
@@ -39,7 +56,7 @@ export const PROJECT_INFO = [
     tech: ["Compiler", "JavaScript", "Node.js", "AST Parser", "Type Checker"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Next.js 15 Snippets",
     image: "/assets/project/nextjs-snippets.png",
     description:
@@ -54,7 +71,7 @@ export const PROJECT_INFO = [
     tech: ["VS Code Extension", "Next.js", "App Router", "Server Actions"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Advanced React Snippets",
     image: "/assets/project/react-snippets.png",
     description:
@@ -73,19 +90,19 @@ export const PROJECT_INFO = [
       "Snippets",
     ],
   },
-  {
-    id: 4,
-    name: "E-Commerce Website",
-    image: "/assets/project/project01.png",
-    description:
-      "A complete e-commerce platform built with React, allowing users to browse products, add items to cart, and checkout. This project demonstrates my abilities in frontend development and state management.",
-    link: "https://github.com/Hareesh108/E-Commerce-Website",
-    bullets: [
-      "Fully responsive shopping cart and checkout flow",
-      "Integrated product catalog with filter options",
-    ],
-    tech: ["React", "TypeScript", "Tailwind CSS", "Redux"],
-  },
+  // {
+  //   id: 5,
+  //   name: "E-Commerce Website",
+  //   image: "/assets/project/project01.png",
+  //   description:
+  //     "A complete e-commerce platform built with React, allowing users to browse products, add items to cart, and checkout. This project demonstrates my abilities in frontend development and state management.",
+  //   link: "https://github.com/Hareesh108/E-Commerce-Website",
+  //   bullets: [
+  //     "Fully responsive shopping cart and checkout flow",
+  //     "Integrated product catalog with filter options",
+  //   ],
+  //   tech: ["React", "TypeScript", "Tailwind CSS", "Redux"],
+  // },
   // {
   //   id: 4,
   //   name: "Twitter Clone",
@@ -111,7 +128,7 @@ export const PROJECT_INFO = [
   //   ]
   // },
   {
-    id: 5,
+    id: 6,
     name: "Sentiment Prediction ML",
     image: "/assets/project/customer-sentiment-ml.png",
     description:
