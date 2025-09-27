@@ -22,23 +22,25 @@ export const PROJECT_INFO = [
     ],
     tech: ["Component Library", "Tailwind CSS", "Next.js", "Turborepo"],
   },
-  {
-    id: 1,
-    name: "HaruDB",
-    image: "/assets/project/harudb.png",
-    description:
-      "A lightweight, embedded database written in Go. Designed for simplicity and speed, HaruDB provides a JSON-based storage engine with Write-Ahead Logging (WAL) for durability and crash recovery. Perfect for local apps, prototyping, and lightweight persistence without external dependencies.",
-    link: "https://github.com/Hareesh108/haruDB",
-    live: "",
-    bullets: [
-      "Embedded key-value store written in Go",
-      "JSON-based storage engine with durability",
-      "Write-Ahead Log (WAL) for crash recovery",
-      "Lightweight and dependency-free, ideal for local persistence",
-      "Simple CLI for installation and management",
-    ],
-    tech: ["Go", "Embedded Database", "WAL", "JSON Storage"],
-  },
+{
+  "id": 1,
+  "name": "HaruDB",
+  "image": "/assets/project/harudb.png",
+  "description": "A modern, fully custom database built from scratch in Go, inspired by PostgreSQL and SQLite. Features TCP-based client-server architecture, ACID transactions, advanced indexing, authentication, backup/restore, and Docker deployment. Perfect for production-ready applications requiring robust data persistence and SQL-like operations.",
+  "link": "https://github.com/Hareesh108/haruDB",
+  "live": "https://haru-db.vercel.app",
+  "bullets": [
+    "TCP-based client-server architecture with interactive REPL",
+    "Full ACID transactions with savepoints and isolation levels",
+    "Advanced SQL operations (DDL/DML) with WHERE clauses and indexing",
+    "Authentication & security with role-based access control and TLS",
+    "Write-Ahead Logging (WAL) for crash recovery and data durability",
+    "Backup & restore with point-in-time recovery capabilities",
+    "Docker & Kubernetes ready with comprehensive CLI tools",
+    "Memory-first design with JSON persistence and atomic operations"
+  ],
+  "tech": ["Go", "Indexing", "WAL", "SQL Parser", "Docker", "CLI"]
+},
   {
     id: 2,
     name: "Unify-JS",
