@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { WindowEventProvider } from "@/contexts/window-event-provider";
 import { ThemeProvider } from "@/components/theme";
-import Navbar from "@/components/navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,8 +16,34 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hareesh Bhittam",
-  description: "",
+  title: {
+    default: "Hareesh Bhittam",
+    template: "%s | Hareesh Bhittam",
+  },
+  description:
+    "Full-stack developer specializing in React, Next.js, TypeScript, and Spring Boot.",
+  keywords: [
+    "Hareesh Bhittam",
+    "React",
+    "Next.js",
+    "Spring Boot",
+    "Full-Stack Developer",
+  ],
+  authors: [{ name: "Hareesh Bhittam" }],
+  openGraph: {
+    title: "Hareesh Bhittam",
+    description:
+      "Full-stack developer specializing in modern web applications.",
+    url: "https://hareesh.is-a.dev",
+    siteName: "Hareesh Bhittam",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    title: "Hareesh Bhittam",
+    description: "Full-stack developer portfolio",
+    creator: "@hareesh_bhittam",
+  },
 };
 
 export default function RootLayout({
@@ -27,17 +52,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <WindowEventProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <ThemeProvider>
-            <Navbar />
-            {children}
-          </ThemeProvider>
-        </body>
-      </WindowEventProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
+      >
+        <WindowEventProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </WindowEventProvider>
+      </body>
     </html>
   );
 }

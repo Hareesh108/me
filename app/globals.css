@@ -6,6 +6,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Enhanced Color Transitions */
+@keyframes color-shift {
+  0% {
+    filter: hue-rotate(0deg) saturate(100%);
+  }
+  25% {
+    filter: hue-rotate(15deg) saturate(110%);
+  }
+  50% {
+    filter: hue-rotate(30deg) saturate(120%);
+  }
+  75% {
+    filter: hue-rotate(15deg) saturate(110%);
+  }
+  100% {
+    filter: hue-rotate(0deg) saturate(100%);
+  }
+}
+
 @keyframes gradient-border-animation {
   0% {
     background-position: 0% 50%;
@@ -34,6 +53,27 @@ body {
           mask-composite: exclude;
 }
 
+/* Enhanced Grid Animations */
+@keyframes grid-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes grid-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -50,6 +90,242 @@ body {
   animation: scroll 1s linear infinite; 
 }
 
+/* Enhanced Traversing Animations with Color Transitions */
+@keyframes traverse-left {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+  20% {
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  80% {
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+}
+
+@keyframes traverse-right {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+  20% {
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  80% {
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+}
+
+@keyframes traverse-horizontal {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+  20% {
+    opacity: 1;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  80% {
+    opacity: 1;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+}
+
+@keyframes traverse-horizontal-reverse {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    background: linear-gradient(to left, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+  20% {
+    opacity: 1;
+    background: linear-gradient(to left, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  80% {
+    opacity: 1;
+    background: linear-gradient(to left, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+    background: linear-gradient(to left, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+}
+
+.animate-traverse-left {
+  animation: traverse-left 3s ease-in-out infinite;
+}
+
+.animate-traverse-right {
+  animation: traverse-right 3s ease-in-out infinite;
+}
+
+.animate-traverse-horizontal {
+  animation: traverse-horizontal 3s ease-in-out infinite;
+}
+
+.animate-traverse-horizontal-reverse {
+  animation: traverse-horizontal-reverse 3s ease-in-out infinite;
+}
+
+/* Enhanced Middle Traversing Animations */
+@keyframes traverse-vertical {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+  20% {
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  80% {
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+}
+
+@keyframes traverse-horizontal-middle {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+  20% {
+    opacity: 1;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  80% {
+    opacity: 1;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+}
+
+@keyframes traverse-diagonal {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.3) 0%, transparent 70%);
+  }
+  20% {
+    opacity: 1;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.6) 0%, transparent 70%);
+  }
+  80% {
+    opacity: 1;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.6) 0%, transparent 70%);
+  }
+  100% {
+    transform: translate(100vw, 100vh);
+    opacity: 0;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.3) 0%, transparent 70%);
+  }
+}
+
+@keyframes traverse-diagonal-reverse {
+  0% {
+    transform: translate(100vw, 0);
+    opacity: 0;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.3) 0%, transparent 70%);
+  }
+  20% {
+    opacity: 1;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.6) 0%, transparent 70%);
+  }
+  80% {
+    opacity: 1;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.6) 0%, transparent 70%);
+  }
+  100% {
+    transform: translate(0, 100vh);
+    opacity: 0;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.3) 0%, transparent 70%);
+  }
+}
+
+.animate-traverse-vertical {
+  animation: traverse-vertical 4s ease-in-out infinite;
+}
+
+.animate-traverse-horizontal-middle {
+  animation: traverse-horizontal-middle 4s ease-in-out infinite;
+}
+
+.animate-traverse-diagonal {
+  animation: traverse-diagonal 8s ease-in-out infinite;
+}
+
+.animate-traverse-diagonal-reverse {
+  animation: traverse-diagonal-reverse 8s ease-in-out infinite;
+}
+
+/* New Grid Enhancement Classes */
+.animate-grid-pulse {
+  animation: grid-pulse 3s ease-in-out infinite;
+}
+
+.animate-grid-rotate {
+  animation: grid-rotate 20s linear infinite;
+}
+
+.animate-color-shift {
+  animation: color-shift 10s ease-in-out infinite;
+}
+
+/* Enhanced Floating Particles */
+@keyframes float-up {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up 6s ease-in-out infinite;
+}
 
 @layer utilities {
   .text-balance {
@@ -133,8 +409,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-
 
 /* 1) 10375C blue
 2) EB8317 orange

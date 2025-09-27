@@ -2,16 +2,16 @@ import ContactPage from "@/components/contact";
 import Footer from "@/components/footer";
 import LandingPage from "@/components/landing-page";
 import ProjectPage from "@/components/project";
-import WorkPage from "@/components/work";
+import Tech from "@/components/tech";
 
 export default function Home() {
   return (
     <>
-      <LandingPage />
+      <LandingPage key="landing-page" />
 
       <ProjectPage />
 
-      <WorkPage />
+      <Tech />
 
       <ContactPage />
 

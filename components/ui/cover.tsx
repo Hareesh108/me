@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useId, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useRef } from "react";
@@ -31,6 +32,7 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref.current]);
 
   return (
