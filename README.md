@@ -1,38 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+	<h1>me</h1>
+	<p>Personal portfolio built with <a href="https://nextjs.org/">Next.js</a>, <a href="https://tailwindcss.com/">Tailwind CSS</a>, and modern web technologies.</p>
+</div>
 
-## Getting Started
 
-First, run the development server:
+## 🚀 Getting Started
+
+1. **Install dependencies:**
+	 ```bash
+	 pnpm install # or npm install, yarn install, bun install
+	 ```
+
+2. **Run the development server:**
+	 ```bash
+	 pnpm dev # or npm run dev, yarn dev, bun dev
+	 ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🛠️ Features
+
+- Next.js App Router (app/ directory)
+- TypeScript & strict mode
+- Tailwind CSS for styling
+- Modern font loading with [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) (Geist)
+- Responsive, accessible, and mobile-first design
+- Modular component structure
+
+---
+
+## 📁 Project Structure
+
+- `app/` — Application routes, layouts, and global styles
+- `components/` — Reusable UI and page components
+- `contexts/` — React context providers
+- `lib/` — Utility functions
+- `public/` — Static assets (images, fonts, etc.)
+
+---
+
+## 🧑‍💻 Development
+
+- Edit `app/page.tsx` to update the homepage
+- Components live in `components/`
+- Styles are managed with Tailwind CSS (`globals.css`, `tailwind.config.ts`)
+
+---
+
+## 📦 Build & Deploy
+
+To build for production:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm build # or npm run build, yarn build, bun build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the production server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm start # or npm start, yarn start, bun start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy easily on [Vercel](https://vercel.com/) or your preferred platform.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Learn More
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [Vercel Deployment Guide](https://nextjs.org/docs/app/building-your-application/deploying)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# me
-# me
+<div align="center">
+	<sub>Made with ❤️ by Hareesh Bhittam</sub>
+</div>
