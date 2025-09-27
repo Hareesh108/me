@@ -22,33 +22,34 @@ export const PROJECT_INFO = [
     ],
     tech: ["Component Library", "Tailwind CSS", "Next.js", "Turborepo"],
   },
-{
-  "id": 1,
-  "name": "HaruDB",
-  "image": "/assets/project/harudb.png",
-  "description": "A modern, fully custom database built from scratch in Go, inspired by PostgreSQL and SQLite. Features TCP-based client-server architecture, ACID transactions, advanced indexing, authentication, backup/restore, and Docker deployment. Perfect for production-ready applications requiring robust data persistence and SQL-like operations.",
-  "link": "https://github.com/Hareesh108/haruDB",
-  "live": "https://haru-db.vercel.app",
-  "bullets": [
-    "TCP-based client-server architecture with interactive REPL",
-    "Full ACID transactions with savepoints and isolation levels",
-    "Advanced SQL operations (DDL/DML) with WHERE clauses and indexing",
-    "Authentication & security with role-based access control and TLS",
-    "Write-Ahead Logging (WAL) for crash recovery and data durability",
-    "Backup & restore with point-in-time recovery capabilities",
-    "Docker & Kubernetes ready with comprehensive CLI tools",
-    "Memory-first design with JSON persistence and atomic operations"
-  ],
-  "tech": ["Go", "Indexing", "WAL", "SQL Parser", "Docker", "CLI"]
-},
+  {
+    id: 1,
+    name: "HaruDB",
+    image: "/assets/project/harudb.png",
+    description:
+      "A modern, fully custom database built from scratch in Go, inspired by PostgreSQL and SQLite. Features TCP-based client-server architecture, ACID transactions, advanced indexing, authentication, backup/restore, and Docker deployment. Perfect for production-ready applications requiring robust data persistence and SQL-like operations.",
+    link: "https://github.com/Hareesh108/haruDB",
+    live: "https://haru-db.vercel.app",
+    bullets: [
+      "TCP-based client-server architecture with interactive REPL",
+      "Full ACID transactions with savepoints and isolation levels",
+      "Advanced SQL operations (DDL/DML) with WHERE clauses and indexing",
+      "Authentication & security with role-based access control and TLS",
+      "Write-Ahead Logging (WAL) for crash recovery and data durability",
+      "Backup & restore with point-in-time recovery capabilities",
+      "Docker & Kubernetes ready with comprehensive CLI tools",
+      "Memory-first design with JSON persistence and atomic operations",
+    ],
+    tech: ["Go", "Indexing", "WAL", "SQL Parser", "Docker", "CLI"],
+  },
   {
     id: 2,
-    name: "Unify-JS",
+    name: "JScriptor",
     image: "/assets/project/unify-js.png",
     description:
-      "A lightweight, experimental type checker for JavaScript that catches type mismatches before runtime. Works directly with plain JS code without requiring TypeScript setup, featuring zero configuration and clear CLI output.",
-    link: "https://github.com/Hareesh108/unify-js",
-    live: "https://www.npmjs.com/package/@hareesh108/unify-js",
+      "JScriptor is a lightweight, typed superset 🚀 of JavaScript that catches type errors early and keeps your codebase clean and maintainable—without any heavy setup.",
+    link: "https://github.com/Hareesh108/jscriptor",
+    live: "https://jscriptor.vercel.app",
     bullets: [
       "Detects type mismatches in variables, functions, and expressions",
       "Supports polymorphic functions adaptable to multiple types",
