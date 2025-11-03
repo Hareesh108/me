@@ -111,7 +111,7 @@ export default function ContactPage() {
                   className="space-y-4"
                 >
                   <motion.a
-                    href="mailto:hareeshbhittam@email.com"
+                    href="mailto:hareeshbhittam@gmail.com"
                     className="flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:bg-accent transition-all duration-300 group"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -122,7 +122,7 @@ export default function ContactPage() {
                     <div className="flex-1">
                       <p className="font-medium text-foreground">Email</p>
                       <p className="text-sm text-muted-foreground">
-                        hareeshbhittam@email.com
+                        hareeshbhittam@gmail.com
                       </p>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
