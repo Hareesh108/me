@@ -6,8 +6,24 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const PROJECT_INFO = [
-  {
+    {
     id: 0,
+    name: "Digital Menu Management",
+    image: "/assets/project/harukit-ui.png",
+    description:
+      "Built a scalable full-stack menu management platform enabling restaurants to manage categories, items, pricing, and dynamic availability in real time. Designed responsive and accessible UI using React, Next.js, Tailwind CSS, ensuring seamless mobile and tablet usability for staff and customers.",
+    link: "https://github.com/Hareesh108/digital-menu-management-system",
+    live: "https://digital-menu-management-system-qt8o.vercel.app",
+    bullets: [
+      "Implemented email/OTP authentication with fallback mock OTP login for reliable access during development and testing.",
+      "Designed responsive and accessible UI using React, Next.js, Tailwind CSS, ensuring seamless mobile and tablet usability for staff and customers.",
+      "Developed secure backend APIs using Next.js App Router + tRPC and integrated with a cloud PostgreSQL database (NeonDB).",
+      "Accessibility-first design following WCAG guidelines",
+    ],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "tRPC", "Prisma", "PostgreSQL (NeonDB)", "Resend"],
+  },
+  {
+    id: 1,
     name: "Harukit UI",
     image: "/assets/project/harukit-ui.png",
     description:
@@ -23,7 +39,7 @@ export const PROJECT_INFO = [
     tech: ["Component Library", "Tailwind CSS", "Next.js", "Turborepo"],
   },
   {
-    id: 1,
+    id: 2,
     name: "HaruDB",
     image: "/assets/project/harudb.png",
     description:
@@ -43,7 +59,7 @@ export const PROJECT_INFO = [
     tech: ["Go", "Indexing", "WAL", "SQL Parser", "Docker", "CLI"],
   },
   {
-    id: 2,
+    id: 3,
     name: "JScriptor",
     image: "/assets/project/unify-js.png",
     description:
@@ -59,7 +75,7 @@ export const PROJECT_INFO = [
     tech: ["Compiler", "JavaScript", "Node.js", "AST Parser", "Type Checker"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Next.js 15 Snippets",
     image: "/assets/project/nextjs-snippets.png",
     description:
@@ -73,26 +89,26 @@ export const PROJECT_INFO = [
     ],
     tech: ["VS Code Extension", "Next.js", "App Router", "Server Actions"],
   },
-  {
-    id: 4,
-    name: "Advanced React Snippets",
-    image: "/assets/project/react-snippets.png",
-    description:
-      "A comprehensive VS Code extension that provides 30+ React code snippets to boost developer productivity. Features functional components, hooks, lifecycle methods, and TypeScript support with single-word prefixes for instant boilerplate generation.",
-    link: "https://github.com/Hareesh108/reactcraft-snippets",
-    live: "https://marketplace.visualstudio.com/items?itemName=HareeshBhittam.reactcraft-snippets&ssr=false#overview",
-    bullets: [
-      "30+ React snippets covering components, hooks, and lifecycle methods",
-      "TypeScript and JavaScript support with auto-completion",
-    ],
-    tech: [
-      "VS Code Extension",
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Snippets",
-    ],
-  },
+  // {
+  //   id: 5,
+  //   name: "Advanced React Snippets",
+  //   image: "/assets/project/react-snippets.png",
+  //   description:
+  //     "A comprehensive VS Code extension that provides 30+ React code snippets to boost developer productivity. Features functional components, hooks, lifecycle methods, and TypeScript support with single-word prefixes for instant boilerplate generation.",
+  //   link: "https://github.com/Hareesh108/reactcraft-snippets",
+  //   live: "https://marketplace.visualstudio.com/items?itemName=HareeshBhittam.reactcraft-snippets&ssr=false#overview",
+  //   bullets: [
+  //     "30+ React snippets covering components, hooks, and lifecycle methods",
+  //     "TypeScript and JavaScript support with auto-completion",
+  //   ],
+  //   tech: [
+  //     "VS Code Extension",
+  //     "React",
+  //     "TypeScript",
+  //     "JavaScript",
+  //     "Snippets",
+  //   ],
+  // },
   // {
   //   id: 5,
   //   name: "E-Commerce Website",
@@ -131,7 +147,7 @@ export const PROJECT_INFO = [
   //   ]
   // },
   {
-    id: 6,
+    id: 5,
     name: "Sentiment Prediction ML",
     image: "/assets/project/customer-sentiment-ml.png",
     description:
