@@ -211,7 +211,6 @@ export const Compare = ({
               <img
                 alt="first image"
                 src={firstImage}
-                fetchPriority="high"
                 className={cn(
                   "absolute inset-0  z-20 rounded-2xl shrink-0 w-full h-full select-none",
                   firstImageClassName
