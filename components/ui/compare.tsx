@@ -211,6 +211,7 @@ export const Compare = ({
               <img
                 alt="first image"
                 src={firstImage}
+                fetchPriority="high"
                 className={cn(
                   "absolute inset-0  z-20 rounded-2xl shrink-0 w-full h-full select-none",
                   firstImageClassName
@@ -229,6 +230,7 @@ export const Compare = ({
               "absolute top-0 left-0 z-[19]  rounded-2xl w-full h-full select-none",
               secondImageClassname
             )}
+            fetchPriority="high"
             alt="second image"
             src={secondImage}
             draggable={false}
