@@ -9,7 +9,6 @@ import { BACKEND_SKILLS, DEVOPS_SKILLS, FRONTEND_SKILLS } from "@/lib/utils";
 export default function AboutMePage() {
   return (
     <div
-      id="about-me"
       className="max-w-screen-lg lg:mx-auto mt-8 md:mt-12 px-1 md:px-4"
     >
       <motion.div

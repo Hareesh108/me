@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <LandingPage key="landing-page" />
 
-      <ProjectPage />
+      <ProjectPage  />
 
       <Tech />
 

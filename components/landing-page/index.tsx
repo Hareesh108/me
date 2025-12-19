@@ -356,7 +356,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4 w-full"
+            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4 w-full relative z-30 pointer-events-auto"
           >
             <motion.a
               href="#about-me"
@@ -375,7 +375,7 @@ export default function LandingPage() {
             </motion.a>
 
             <motion.a
-              href="mailto:hareeshbhittam@email.com"
+              href="#contact"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="transition-all duration-300 w-full sm:w-auto"
@@ -419,8 +419,10 @@ export default function LandingPage() {
             </motion.div>
           </motion.div>
         </motion.div>
+
         {/* About Me Section */}
         <motion.div
+          id="about-me"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
