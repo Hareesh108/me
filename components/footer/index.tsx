@@ -66,7 +66,7 @@ export default function Footer() {
                   className="flex items-center gap-2"
                 >
                   <div className="p-2 bg-primary/10 rounded-lg">
-                    <FaStar className="w-4 h-4 text-primary" />
+                    <FaStar aria-hidden="true" className="w-4 h-4 text-primary" />
                   </div>
                   <span className="text-sm font-medium text-muted-foreground">
                     Connect with me
@@ -139,7 +139,7 @@ export default function Footer() {
                 >
                   <p className="text-sm text-muted-foreground">
                     Created with{" "}
-                    <FaHeart className="inline-block w-3 h-3 text-red-500 animate-pulse" />{" "}
+                    <FaHeart aria-hidden="true" className="inline-block w-3 h-3 text-red-500 animate-pulse" />{" "}
                     by{" "}
                     <motion.a
                       href="https://www.linkedin.com/in/hareeshbhittam/"
@@ -149,7 +149,7 @@ export default function Footer() {
                       whileHover={{ scale: 1.02 }}
                     >
                       <span>Hareesh</span>
-                      <FaArrowRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      <FaArrowRight aria-hidden="true" className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </motion.a>
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">

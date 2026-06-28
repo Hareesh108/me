@@ -107,9 +107,9 @@ export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
                   whileTap={{ scale: 0.95 }}
                 >
                   {isPlaying ? (
-                    <FaPause className="w-4 h-4" />
+                    <FaPause aria-hidden="true" className="w-4 h-4" />
                   ) : (
-                    <FaPlay className="w-4 h-4" />
+                    <FaPlay aria-hidden="true" className="w-4 h-4" />
                   )}
                 </motion.button>
               </motion.div>
@@ -186,7 +186,7 @@ export function SocialDialog({ className }: Readonly<SocialDialogProps>) {
                 className="flex items-center justify-center w-8 h-8"
                 title="Decorative Star"
               >
-                <FaStar className="w-4 h-4 text-primary/60 animate-pulse" />
+                <FaStar aria-hidden="true" className="w-4 h-4 text-primary/60 animate-pulse" />
               </motion.div>
             </div>
           </div>
