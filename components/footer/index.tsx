@@ -153,7 +153,7 @@ export default function Footer() {
                     </motion.a>
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    © 2025 All rights reserved.
+                    © {new Date().getFullYear()} All rights reserved.
                   </p>
                 </motion.div>
 
